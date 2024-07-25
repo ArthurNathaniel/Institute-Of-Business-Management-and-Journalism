@@ -1,0 +1,97 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .hero_bg{
+    height: 670px;
+    /* position: relative; */
+  }
+
+  .hero_text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0000005d;
+    color: #fff;
+  }
+
+  .hero_text h1{
+   
+    font-size: 45px;
+  }
+.hero_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+  .hero_btn button{
+    margin-top: 30px;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 30px;
+    background-color: #2C2C74;
+    color: #fff;
+  }
+
+  .live{
+  
+   
+    background-color: #ED1B24 !important;
+    color: #fff;
+}
+
+.what_stand_for_all{
+    padding: 0 5%;
+    margin-top: 50px;
+
+}
+
+.stand_heading h1{
+    text-align: center;
+font-size: 40px;
+}
+
+.what_we_stanf_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.box{
+    margin-top: 50px;
+    padding: 0 5%;
+    padding-block: 30px;
+    text-align: center;
+    background-color: #f2f4f6;
+}
+.box h3{
+    margin-block: 10px;
+}
+
+.box img{
+    width: 100px;
+    height: 100px;
+}
