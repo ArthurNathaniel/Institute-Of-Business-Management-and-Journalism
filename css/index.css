@@ -213,3 +213,54 @@ margin-top: 50px;
 .title{
   margin-top: 15px;
 }
+
+.gallery_all{
+  padding: 0 5%;
+  background-color: #2C2C74;
+  margin-top: 50px;
+  padding-block: 50px;
+}
+
+.gallery_title{
+  text-align: center;
+  color: #fff;
+}
+.gallery_title h4{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.gallery_title h1{
+
+  font-size: 40px;
+}
+
+.gallery_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.gallery{
+  border: 2px solid #fff;
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery_no_found{
+  width: 90%;
+
+  position: absolute;
+
+}
+.gallery_no_found p{
+  text-align: center;
+ 
+  color: #fff;
+}

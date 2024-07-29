@@ -134,9 +134,28 @@ h6 {
     display: none;
 }
 
+.forms{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.forms input{
+    height: 44px;
+    width: 100%;
+    border: 2px solid #ddd;
+}
 
+.forms button{
+    height: 44px;
+    width: 100%;
+    border:none;
+    background-color: #2C2C74;
+    color: #fff;
+}
 
-
+.add_gallery{
+    padding: 0 25%;
+}
 @media only screen and (max-width: 1110px) {
 
 
