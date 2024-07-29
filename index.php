@@ -1,3 +1,9 @@
+<?php
+include 'db.php';
+
+$sql = "SELECT * FROM news ORDER BY id DESC";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +91,139 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="programmme_all">
+      <div class="programme_title">
+        <h1>Find Programme</h1>
+      </div>
+      <div class="programme_search">
+      <input type="text" id="searchInput" placeholder="Search for a programme" onkeyup="filterProgrammes()">
+      </div>
+      <div class="programme_swiper">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+          <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/hero_2.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>HND in Communication</h4>
+                <p> <strong>Duration:</strong> <i>3 years</i></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/hero_2.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>HND in Marketing</h4>
+               <p><strong>Duration:</strong> <i>3 years</i></p></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/hero_2.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>HND in Journalism</h4>
+                <p> <strong>Duration:</strong> <i>3 years</i></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/hero_2.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>HND in Radio & TV Broadcsting</h4>
+                <p> <strong>Duration:</strong> <i>3 years</i></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/hero_2.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Diploma in Radio & TV Broadcsting</h4>
+                <p> <strong>Duration:</strong> <i> 3 Months</i></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+      <div id="noResults">
+      No programmes found.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="news_all">
+    <div class="news_title">
+      <h4><span><i class="fa-solid fa-minus"></i></span>OUR RECENT NEWS</h4>
+      <h1>Latest news updated weekly</h1>
+    </div>
+    <div class="news_swiper">
+    <div class="swiper mySwiper3">
+    <div class="swiper-wrapper">
+      <?php while ($row = mysqli_fetch_assoc($result)): ?>
+      <div class="swiper-slide news_card" onclick="showNewsDetails(<?php echo $row['id']; ?>)">
+        <div class="news_image">
+          <img src="<?php echo $row['image']; ?>" alt="">
+        </div>
+        <div class="news_content">
+          <div class="date">
+            <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
+          </div>
+          <div class="title">
+            <h4><?php echo $row['title']; ?></h4>
+          </div>
+        </div>
+      </div>
+      <?php endwhile; ?>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+    </div>
+  </div>
+</section>
+<section>
+  <?php include 'gallery.php'?>
+</section>
   <script src="./js/swiper.js"></script>
+  <script src="./js/search.js"></script>
 </body>
 
 </html>
