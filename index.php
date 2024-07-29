@@ -97,12 +97,12 @@ $result = mysqli_query($conn, $sql);
         <h1>Find Programme</h1>
       </div>
       <div class="programme_search">
-      <input type="text" id="searchInput" placeholder="Search for a programme" onkeyup="filterProgrammes()">
+        <input type="text" id="searchInput" placeholder="Search for a programme" onkeyup="filterProgrammes()">
       </div>
       <div class="programme_swiper">
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
-          <div class="swiper-slide programme_card">
+            <div class="swiper-slide programme_card">
               <div class="programme_img">
                 <img src="./images/hero_2.jpg" alt="">
               </div>
@@ -123,7 +123,8 @@ $result = mysqli_query($conn, $sql);
               </div>
               <div class="programme_details">
                 <h4>HND in Marketing</h4>
-               <p><strong>Duration:</strong> <i>3 years</i></p></p>
+                <p><strong>Duration:</strong> <i>3 years</i></p>
+                </p>
                 <div class="programme_btn">
                   <a href="">
                     <button>Read More</button>
@@ -176,7 +177,7 @@ $result = mysqli_query($conn, $sql);
                 </div>
               </div>
             </div>
-          
+
 
           </div>
           <div class="swiper-pagination"></div>
@@ -184,44 +185,76 @@ $result = mysqli_query($conn, $sql);
 
       </div>
       <div id="noResults">
-      No programmes found.
+        No programmes found.
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="news_all">
-    <div class="news_title">
-      <h4><span><i class="fa-solid fa-minus"></i></span>OUR RECENT NEWS</h4>
-      <h1>Latest news updated weekly</h1>
-    </div>
-    <div class="news_swiper">
-    <div class="swiper mySwiper3">
-    <div class="swiper-wrapper">
-      <?php while ($row = mysqli_fetch_assoc($result)): ?>
-      <div class="swiper-slide news_card" onclick="showNewsDetails(<?php echo $row['id']; ?>)">
-        <div class="news_image">
-          <img src="<?php echo $row['image']; ?>" alt="">
-        </div>
-        <div class="news_content">
-          <div class="date">
-            <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
+  <section>
+    <div class="news_all">
+      <div class="news_title">
+        <h4><span><i class="fa-solid fa-minus"></i></span>OUR RECENT NEWS</h4>
+        <h1>Latest news updated weekly</h1>
+      </div>
+      <div class="news_swiper">
+        <div class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+              <div class="swiper-slide news_card" onclick="showNewsDetails(<?php echo $row['id']; ?>)">
+                <div class="news_image">
+                  <img src="<?php echo $row['image']; ?>" alt="">
+                </div>
+                <div class="news_content">
+                  <div class="date">
+                    <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
+                  </div>
+                  <div class="title">
+                    <h4><?php echo $row['title']; ?></h4>
+                  </div>
+                </div>
+              </div>
+            <?php endwhile; ?>
           </div>
-          <div class="title">
-            <h4><?php echo $row['title']; ?></h4>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-      <?php endwhile; ?>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
+  </section>
+  <section>
+    <?php include 'gallery.php' ?>
+  </section>
+  <section>
+    <div class="contact_all">
+      <div class="contact_title">
+        <h4><span><i class="fa-solid fa-minus"></i></span> GET IN TOUCH WITH US</h4>
+        <h1>Contact Us</h1>
+      </div>
+      <div class="contact_grid">
+        <div class="contact_box">
+          <img src="./images/call.png" alt="">
+          <a href="tel:054 217 0510">
+            <h1>+233 54 217 0510</h1>
+          </a>
+        </div>
+        <div class="contact_box">
+          <img src="./images/email.png" alt="">
+          <a href="mailto:info@ibmandj.org">
+            <h1>info@ibmandj.org</h1>
+          </a>
+        </div>
+        <div class="contact_box">
+          <img src="./images/location.png" alt="">
+          <a href="https://maps.app.goo.gl/VAyaeUS6mUQMxSrv6">
+            <h1>Krofrom near X5</h1>
+          </a>
+        </div>
+      </div>
+      <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-  </div>
-</section>
-<section>
-  <?php include 'gallery.php'?>
-</section>
+  </section>
+  <section></section>
   <script src="./js/swiper.js"></script>
   <script src="./js/search.js"></script>
 </body>

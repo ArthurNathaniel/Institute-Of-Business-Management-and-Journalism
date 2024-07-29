@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: "Onest", sans-serif;
+    font-family: 'gilmer', sans-serif;
 
 }
 
@@ -24,6 +24,14 @@ h6 {
 }
 
 
+@font-face {
+    font-family: 'gilmer';
+    src: url('./gilmer.otf') format('opentype');
+}
+
+body {
+    font-family: 'gilmer', sans-serif;
+}
 
 
 

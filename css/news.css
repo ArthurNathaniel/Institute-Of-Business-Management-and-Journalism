@@ -30,3 +30,13 @@ margin-bottom: 40px;
     margin-top: 30px;
 }
 
+
+.add_news{
+    padding: 0 25%;
+}
+
+.news_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
