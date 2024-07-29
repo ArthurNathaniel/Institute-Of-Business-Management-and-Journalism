@@ -24,24 +24,22 @@ $row = mysqli_fetch_assoc($result);
 <body>
 <?php include 'navbar.php' ?>
     <div class="news_details">
-        <div class="back">
-          <a href="index.php">
-          <p><i class="fa-solid fa-arrow-left-long"></i> Back</p>
-          </a>
+        <div class="author">
+            <h4>IBM&J Media Team</h4>
         </div>
-        <div class="news_image" style=" background-image: url(<?php echo $row['image']; ?>);">
-            
-            <div class="titles">
-                <h4><?php echo $row['title']; ?></h4>
-            </div>
-        </div>
-        <div class="news_content">
-            <div class="date">
+    <div class="date">
                 <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
             </div>
-            <div class="title">
-                <h4><?php echo $row['title']; ?></h4>
-            </div>
+       <div class="title">
+       <h1><?php echo $row['title']; ?></h1>
+       </div>
+        <div class="news_image" style=" background-image: url(<?php echo $row['image']; ?>);">
+            
+         
+        </div>
+        <div class="news_content">
+          
+           
             <div class="content">
                 <p><?php echo $row['content']; ?></p>
             </div>

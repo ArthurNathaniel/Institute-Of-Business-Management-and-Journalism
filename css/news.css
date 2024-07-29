@@ -6,35 +6,27 @@
      width: 100%;
      background-size: cover;
     
-     font-size: 40px;
- 
-    position: relative;
+   
 }
 .news_details{
-    padding: 0 5%;
+    padding: 0 15%;
+    padding-block: 100px;
 }
 .back{
     padding-block: 20px;
 }
-.titles{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.titles h4{
-background-color: #00000042;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-   height: 100%;
-   color:#fff;
-   width: 100%;
+
+.title h1{
+
+margin-bottom: 40px;
 }
 
-.news_content, .date, .title, .content{
+ .date, .title, .content{
     margin-top: 20px;
+}
+
+.news_content{
+    padding: 0 5%;
+    margin-top: 30px;
 }
 
