@@ -1,9 +1,3 @@
-<?php
-include 'db.php';
-
-$sql = "SELECT * FROM news ORDER BY id DESC";
-$result = mysqli_query($conn, $sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,33 +80,33 @@ $result = mysqli_query($conn, $sql);
         </div>
       </div>
       <div class="upcoming_event">
-    <div class="upcoming_title">
-        <h1>Upcoming Events</h1>
-    </div>
-    <?php
-    include 'db.php'; // Include your database connection
+        <div class="upcoming_title">
+          <h1>Upcoming Events</h1>
+        </div>
+        <?php
+        include 'db.php'; // Include your database connection
 
-    // Get the current date
-    $current_date = date('Y-m-d');
+        // Get the current date
+        $current_date = date('Y-m-d');
 
-    // Query to select only upcoming events
-    $sql = "SELECT * FROM events WHERE date >= '$current_date' ORDER BY date ASC";
-    $result = mysqli_query($conn, $sql);
+        // Query to select only upcoming events
+        $sql = "SELECT * FROM events WHERE date >= '$current_date' ORDER BY date ASC";
+        $result = mysqli_query($conn, $sql);
 
-    while ($event = mysqli_fetch_assoc($result)) {
-        echo '<div class="events_box" onclick="showEventDetails(' . $event['id'] . ')">';
-        echo '<p class="events_date"><i class="fa-solid fa-calendar-days"></i> ' . date('j F, Y', strtotime($event['date'])) . '</p>';
-        echo '<h1 class="events_title">' . htmlspecialchars($event['title']) . '</h1>';
-        echo '<div class="events_flex">';
-        echo '<p class="events_time"><i class="fa-regular fa-clock"></i> ' . date('h:i a', strtotime($event['time'])) . '</p>';
-        echo '<p class="events_location"><i class="fa-solid fa-location-dot"></i> ' . htmlspecialchars($event['location']) . '</p>';
-        echo '</div>';
-        echo '</div>';
-    }
+        while ($event = mysqli_fetch_assoc($result)) {
+          echo '<div class="events_box" onclick="showEventDetails(' . $event['id'] . ')">';
+          echo '<p class="events_date"><i class="fa-solid fa-calendar-days"></i> ' . date('j F, Y', strtotime($event['date'])) . '</p>';
+          echo '<h1 class="events_title">' . htmlspecialchars($event['title']) . '</h1>';
+          echo '<div class="events_flex">';
+          echo '<p class="events_time"><i class="fa-regular fa-clock"></i> ' . date('h:i a', strtotime($event['time'])) . '</p>';
+          echo '<p class="events_location"><i class="fa-solid fa-location-dot"></i> ' . htmlspecialchars($event['location']) . '</p>';
+          echo '</div>';
+          echo '</div>';
+        }
 
-    mysqli_close($conn);
-    ?>
-</div>
+        mysqli_close($conn);
+        ?>
+      </div>
 
     </div>
   </section>
@@ -248,6 +242,12 @@ $result = mysqli_query($conn, $sql);
         <h4><span><i class="fa-solid fa-minus"></i></span>OUR RECENT NEWS</h4>
         <h1>Latest news updated weekly</h1>
       </div>
+      <?php
+      include 'db.php';
+
+      $sql = "SELECT * FROM news ORDER BY id DESC";
+      $result = mysqli_query($conn, $sql);
+      ?>
       <div class="news_swiper">
         <div class="swiper mySwiper3">
           <div class="swiper-wrapper">
