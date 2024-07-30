@@ -65,6 +65,58 @@ $result = mysqli_query($conn, $sql);
       </div>
   </section>
   <section>
+    <div class="about_us_home_all">
+      <div class="home_about_text">
+        <div class="home_about_title">
+          <h4>About us <br>
+            <span><i class="fa-solid fa-minus"></i></span>
+          </h4>
+          <h1>Welcome to <br> IBM&amp;J</h1>
+        </div>
+        <p>
+          Located at Opposite the NPP Regional Office near Sika FM, Krofrom, Kumasi, the Institute of Business Management and Journalism (IBM&J) has been at the forefront of media education in Ghana for 33 years. Renowned for producing top-tier professionals who contribute significantly to the nation's media and communication landscape, IBM&J stands as a beacon of excellence in the field of business management and journalism.
+        </p>
+        <p>
+          Join us at IBM&J and be a part of a legacy of excellence in media education. Whether you are passionate about communication, marketing, journalism, or broadcasting, our programs are designed to help you achieve your career goals and make a meaningful impact in the media industry. With our comprehensive curriculum, state-of-the-art facilities, and experienced faculty, IBM&J is the perfect place to start your journey towards a successful and fulfilling career in media and communication.
+        </p>
+        <div class="home_about_btn">
+          <a href="">
+            <button>Read more</button>
+          </a>
+        </div>
+      </div>
+      <div class="upcoming_event">
+    <div class="upcoming_title">
+        <h1>Upcoming Events</h1>
+    </div>
+    <?php
+    include 'db.php'; // Include your database connection
+
+    // Get the current date
+    $current_date = date('Y-m-d');
+
+    // Query to select only upcoming events
+    $sql = "SELECT * FROM events WHERE date >= '$current_date' ORDER BY date ASC";
+    $result = mysqli_query($conn, $sql);
+
+    while ($event = mysqli_fetch_assoc($result)) {
+        echo '<div class="events_box" onclick="showEventDetails(' . $event['id'] . ')">';
+        echo '<p class="events_date"><i class="fa-solid fa-calendar-days"></i> ' . date('j F, Y', strtotime($event['date'])) . '</p>';
+        echo '<h1 class="events_title">' . htmlspecialchars($event['title']) . '</h1>';
+        echo '<div class="events_flex">';
+        echo '<p class="events_time"><i class="fa-regular fa-clock"></i> ' . date('h:i a', strtotime($event['time'])) . '</p>';
+        echo '<p class="events_location"><i class="fa-solid fa-location-dot"></i> ' . htmlspecialchars($event['location']) . '</p>';
+        echo '</div>';
+        echo '</div>';
+    }
+
+    mysqli_close($conn);
+    ?>
+</div>
+
+    </div>
+  </section>
+  <section>
     <div class="what_stand_for_all">
       <div class="stand_heading">
         <h1>What We Stand For</h1>
@@ -250,11 +302,29 @@ $result = mysqli_query($conn, $sql);
         </div>
       </div>
       <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
-  <section></section>
+  <section>
+    <div class="cta_all">
+      <h1>2024/2025 Admissions now Open</h1>
+      <a href="">
+        <button>
+          <a href="">APPLY NOW</a>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <?php include 'footer.php'; ?>
+  </section>
+  <script>
+    function showEventDetails(eventId) {
+      window.location.href = 'event_details.php?id=' + eventId;
+    }
+  </script>
   <script src="./js/swiper.js"></script>
   <script src="./js/search.js"></script>
 </body>

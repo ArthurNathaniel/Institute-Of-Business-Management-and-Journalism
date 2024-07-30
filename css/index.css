@@ -64,6 +64,66 @@
   background-color: #ED1B24 !important;
   color: #fff;
 }
+.about_us_home_all{
+  padding: 0 5%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.home_about_title i{
+  color: goldenrod;
+}
+.home_about_title h1{
+font-size: 40px;
+}
+
+.home_about_text p{
+margin-top: 20px;
+}
+
+.home_about_btn button{
+  margin-top: 20px;
+  padding: 15px 45px;
+  background-color: goldenrod;
+  border: none;
+}
+
+.upcoming_event{
+  background-color: #ffffff2c;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 0 5%;
+  padding-block: 30px;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.events_box{
+  margin-top: 50px;
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+}
+.events_box i{
+  color: goldenrod;
+}
+
+.events_title{
+  padding-block: 10px;
+}
+
+.events_flex{
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
 
 .what_stand_for_all {
   padding: 0 5%;

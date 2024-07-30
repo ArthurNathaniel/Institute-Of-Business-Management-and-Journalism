@@ -1,0 +1,47 @@
+body {
+    background-color: #f4f4f8;
+}
+
+.event_details {
+    margin: 0 10%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 50px;
+    padding: 0 5%;
+    padding-block: 50px;
+    border-radius: 10px;
+}
+
+.events_flex {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.events_flex i {
+    color: goldenrod;
+}
+
+.heading {
+    padding-block: 20px;
+}
+.media{
+    margin-block: 20px;
+}
+.media img {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.add_events{
+    padding: 0 25%;
+}
+
+.media video{
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
