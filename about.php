@@ -8,6 +8,7 @@
     <meta name="keywords" content="IBM&J, Institute of Business Management and Journalism, media school, Ghana, communication courses, marketing courses, journalism courses, broadcasting courses, media education">
     <meta name="author" content="Institute of Business Management and Journalism">
     <title>About Us - Institute of Business Management and Journalism</title>
+    <?php include 'cdn.php' ?>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/about.css">
 </head>

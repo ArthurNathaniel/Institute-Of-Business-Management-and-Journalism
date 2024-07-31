@@ -8,6 +8,7 @@
     <meta name="keywords" content="IBM&J, Governing Council, media school, Ghana, Institute of Business Management and Journalism, media education, council members">
     <meta name="author" content="Institute of Business Management and Journalism">
     <title>Governing Council - Institute of Business Management and Journalism</title>
+    <?php include 'cdn.php' ?>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/about.css">
 </head>

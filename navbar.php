@@ -18,19 +18,16 @@
         <div class="dropdown">
             <a href="#">About the institution <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-            <a href="about.php"> History / Our Mission & Vision</a>    
-            <a href="governing_council.php">Governing Council</a>
-                
-              
-
+                <a href="about.php"> History / Our Mission & Vision</a>
+                <a href="governing_council.php">Governing Council</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="#">Academics <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Calenders</a>
-                <a href="">Calenders</a>
+                <a href="calendar.php">Calender</a>
+                <a href="">Department</a>
                 <a href=""> Students handbook / Statutes</a>
 
             </div>
