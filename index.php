@@ -12,7 +12,7 @@
 
 <body>
   <?php include 'navbar.php' ?>
-  <section>
+  <section>  
     <div class="hero_bg">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">

@@ -400,3 +400,11 @@ height: 100px;
   height: 500px;
   margin-top: 50px;
 }
+
+
+@media only screen and (max-width: 1110px) {
+.about_us_home_all{
+  display: flex;
+  flex-direction: column-reverse;
+}
+}

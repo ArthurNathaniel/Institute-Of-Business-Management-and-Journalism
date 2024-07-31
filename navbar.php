@@ -32,17 +32,16 @@
 
             </div>
         </div>
-        <a href="">SRC</a>
+        <a href="src.php">SRC</a>
 
         <div class="dropdown">
             <a href="#">Admission <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Online Admission</a>
-                <a href="">Calenders</a>
-                <a href="">Students handbook / Statutes</a>
-
+                <a href="admission.php">How to apply</a>
+                <a href="online_admission.php">Online Admission</a>
             </div>
         </div>
+        <a href="alumni.php">Alumni</a>
         <a href="contact.php">Contact Us</a>
     </div>
 
@@ -51,40 +50,35 @@
         <i class="fa-solid fa-bars-staggered"></i>
     </button>
     <div class="mobile">
-        <a href="index.php"></a>
-
-        <a href="index.php">Home</a>
+    <a href="index.php">Home</a>
         <div class="dropdown">
             <a href="#">About the institution <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Governing Council</a>
-                <a href="">History</a>
-                <a href=""> Our Mission & Vision</a>
-
+                <a href="about.php"> History / Our Mission & Vision</a>
+                <a href="governing_council.php">Governing Council</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="#">Academics <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Calenders</a>
-                <a href="">Calenders</a>
-                <a href=""> Students handbook / Statutes</a>
+                <a href="calendar.php">Calender</a>
+                <a href="department.php">Department</a>
+                <a href="handbook.php"> Students handbook / Statutes</a>
 
             </div>
         </div>
-        <a href="">SRC</a>
+        <a href="src.php">SRC</a>
 
         <div class="dropdown">
             <a href="#">Admission <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Online Admission</a>
-                <a href="">Calenders</a>
-                <a href="">Students handbook / Statutes</a>
-
+                <a href="admission.php">How to apply</a>
+                <a href="online_admission.php">Online Admission</a>
             </div>
         </div>
-        <a href="">Contact Us</a>
+        <a href="alumni.php">Alumni</a>
+        <a href="contact.php">Contact Us</a>
     </div>
 </div>
 
