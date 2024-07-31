@@ -18,9 +18,10 @@
         <div class="dropdown">
             <a href="#">About the institution <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="">Governing Council</a>
-                <a href="">History</a>
-                <a href=""> Our Mission & Vision</a>
+            <a href="about.php"> History / Our Mission & Vision</a>    
+            <a href="governing_council.php">Governing Council</a>
+                
+              
 
             </div>
         </div>

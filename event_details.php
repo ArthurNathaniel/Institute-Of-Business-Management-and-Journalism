@@ -57,7 +57,20 @@ $event = mysqli_fetch_assoc($result);
 
         <p><?php echo htmlspecialchars($event['content']); ?></p>
     </div>
+    <section>
+    <div class="cta_all">
+      <h1>2024/2025 Admissions now Open</h1>
+      <a href="">
+        <button>
+          <a href="">APPLY NOW</a>
+        </button>
+      </a>
+    </div>
+  </section>
 
+  <section>
+    <?php include 'footer.php'; ?>
+  </section>
 </body>
 
 </html>

@@ -22,3 +22,11 @@ CREATE TABLE events (
     media_url VARCHAR(255),
     media_type ENUM('image', 'video') NOT NULL
 );
+
+
+CREATE TABLE governing_council (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255) NOT NULL
+);

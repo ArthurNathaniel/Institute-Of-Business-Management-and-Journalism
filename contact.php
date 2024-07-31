@@ -20,7 +20,7 @@
         <div class="hero_text">
             <h1>Contact</h1>
             <div class="breadcrumb">
-                <p><a href="#">Home</a> / Contact</p>
+                <p><a href="index.php">Home</a> / Contact</p>
             </div>
         </div>
 
