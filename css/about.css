@@ -21,7 +21,7 @@
     margin-top: 15px;
 }
 
-.governing_council_all{
+.governing_council_all, .executive_council_all{
     padding: 0 7%;
     padding-block: 70px;
     display: grid;
@@ -29,22 +29,22 @@
     gap: 30px;
 }
 
-.governing_card{
+.governing_card, .executive_card{
     width: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.governing_image{
+.governing_image, .executive_image{
     width: 100%;
 }
-.governing_image img{
+.governing_image img, .executive_image img{
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-.governing_details{
+.governing_details, .executive_details{
     padding: 0 5%;
     padding-block: 20px;
 }
-.governing_details p{
+.governing_details p, .executive_details p{
     margin-top: 10px;
 }

@@ -12,6 +12,68 @@
     <link rel="stylesheet" href="./css/academics.css">
 </head>
 <body>
-    
+<?php include 'navbar.php' ?>
+    <section>
+        <div class="hero_bg">
+
+            <div class="hero_text">
+                <h1>Department</h1>
+                <div class="breadcrumb">
+                    <p><a href="index.php">Home</a> / Academics / Department</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="department_all">
+        <div class="department_grid">
+        <div class="department_card">
+                    <h2>Department of Communication</h2>
+                    <p>School of Communication</p>
+                    <div class="department_btn">
+                        <a href="">
+                            <button>View Programmess</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="department_card">
+                    <h2>Department of Communication</h2>
+                    <p>School of Communication</p>
+                    <div class="department_btn">
+                        <a href="">
+                            <button>View Programmess</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="department_card">
+                    <h2>Department of Communication</h2>
+                    <p>School of Communication</p>
+                    <div class="department_btn">
+                        <a href="">
+                            <button>View Programmess</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="department_card">
+                    <h2>Department of Communication</h2>
+                    <p>School of Communication</p>
+                    <div class="department_btn">
+                        <a href="">
+                            <button>View Programmess</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <?php include 'footer.php'; ?>
+    </section>
 </body>
 </html>

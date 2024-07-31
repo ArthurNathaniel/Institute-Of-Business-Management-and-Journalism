@@ -39,3 +39,18 @@ CREATE TABLE academic_calendar (
     from_date DATE NOT NULL,
     to_date DATE NOT NULL
 );
+
+
+CREATE TABLE handbooks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    file_path VARCHAR(255) NOT NULL,
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE src_executives (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255) NOT NULL
+);

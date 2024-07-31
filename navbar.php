@@ -27,8 +27,8 @@
             <a href="#">Academics <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
                 <a href="calendar.php">Calender</a>
-                <a href="">Department</a>
-                <a href=""> Students handbook / Statutes</a>
+                <a href="department.php">Department</a>
+                <a href="handbook.php"> Students handbook / Statutes</a>
 
             </div>
         </div>

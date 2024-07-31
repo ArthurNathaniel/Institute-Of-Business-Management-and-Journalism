@@ -18,3 +18,40 @@ td {
     padding: 0 20%;
     margin-block: 80px;
 }
+
+.department_all{
+    padding: 0 7%;
+}
+
+.department_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-block: 80px;
+}
+
+.department_card{
+    border: 1px solid #ddd;
+    padding: 0 5%;
+    padding-block: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.department_btn button{
+   width: 100%;
+   height: 44px;
+    background-color: #2C2C74;
+   border: none;
+   color: #fff;
+   margin-top: 20px;
+}
+
+.handbook_all{
+    padding: 0 7%;
+    padding-block: 80px;
+}
+
+.executive_council_all{
+    padding: 0 7%;
+}
