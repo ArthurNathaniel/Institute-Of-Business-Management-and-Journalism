@@ -407,4 +407,20 @@ height: 100px;
   display: flex;
   flex-direction: column-reverse;
 }
+.home_about_text{
+  margin-top: 50px;
+}
+.what_we_stanf_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.
+}
+
+
+@media only screen and (max-width: 7120px) {
+  .what_we_stanf_grid{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
 }

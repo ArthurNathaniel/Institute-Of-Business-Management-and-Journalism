@@ -74,7 +74,7 @@
           Join us at IBM&J and be a part of a legacy of excellence in media education. Whether you are passionate about communication, marketing, journalism, or broadcasting, our programs are designed to help you achieve your career goals and make a meaningful impact in the media industry. With our comprehensive curriculum, state-of-the-art facilities, and experienced faculty, IBM&J is the perfect place to start your journey towards a successful and fulfilling career in media and communication.
         </p>
         <div class="home_about_btn">
-          <a href="">
+          <a href="about.php">
             <button>Read more</button>
           </a>
         </div>
