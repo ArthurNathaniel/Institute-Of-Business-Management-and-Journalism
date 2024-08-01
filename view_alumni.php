@@ -10,8 +10,7 @@
     <title>View Alumni - Institute of Business Management and Journalism</title>
     <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/view-alumni.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/alumni.css">
 </head>
 
 <body>
@@ -32,7 +31,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Full Name</th>
+                        <th>First  Name</th>
+                        <th>Last Name</th>
                         <th>Phone Number</th>
                         <th>Action</th>
                     </tr>

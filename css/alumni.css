@@ -41,4 +41,9 @@ p {
 .side_info{
     margin-top: 50px;
 }
+.view-details{
+    background-color: transparent;
+   
+    border: none;
 
+}
