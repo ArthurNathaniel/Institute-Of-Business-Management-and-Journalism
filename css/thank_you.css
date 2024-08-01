@@ -1,0 +1,31 @@
+
+
+.thank_you_message {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.thank_you_message h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank_you_message p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.thank_you_message .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.thank_you_message .btn:hover {
+    background-color: #0056b3;
+}

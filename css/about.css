@@ -48,3 +48,42 @@
 .governing_details p, .executive_details p{
     margin-top: 10px;
 }
+
+@media only screen and (max-width: 1110px) {
+    .about_all{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+
+    .governing_council_all, .executive_council_all{
+        padding: 0 7%;
+        padding-block: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 812px) {
+
+    .governing_council_all, .executive_council_all{
+        padding: 0 7%;
+        padding-block: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 612px) {
+
+    .governing_council_all, .executive_council_all{
+        padding: 0 7%;
+        padding-block: 70px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

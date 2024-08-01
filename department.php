@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the departments at IBM&J, the leading media school in Ghana. Learn about our various academic and administrative departments, their roles, and how they contribute to the excellence of the Institute of Business Management and Journalism.">
     <meta name="keywords" content="IBM&J, departments, academic departments, media school, Ghana, Institute of Business Management and Journalism, administrative departments">
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/academics.css">
 </head>
+
 <body>
-<?php include 'navbar.php' ?>
+    <?php include 'navbar.php' ?>
     <section>
         <div class="hero_bg">
 
@@ -28,46 +30,71 @@
 
     <section>
         <div class="department_all">
-        <div class="department_grid">
-        <div class="department_card">
-                    <h2>Department of Communication</h2>
-                    <p>School of Communication</p>
-                    <div class="department_btn">
-                        <a href="">
-                            <button>View Programmess</button>
-                        </a>
-                    </div>
+            <div class="department_grid">
+             
+            <div class="department_card">
+                    <h3>FACULTY OF ARTS</h>
+                        <p>Dept. Of communication</p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
+                </div>
+
+
+                <div class="department_card">
+                    <h3>FACULTY OF ARTS</h>
+                        <p>Dept. Of Adm. & Secretaryship</p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
+                </div>
+
+
+                <div class="department_card">
+                    <h3>FACULTY OF ARTS</h>
+                        <p>Dept. Of Business Management </p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
                 </div>
 
                 <div class="department_card">
-                    <h2>Department of Communication</h2>
-                    <p>School of Communication</p>
-                    <div class="department_btn">
-                        <a href="">
-                            <button>View Programmess</button>
-                        </a>
-                    </div>
+                    <h3>FACULTY OF ARTS</h>
+                        <p>Dept. Of marketing </p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
                 </div>
 
                 <div class="department_card">
-                    <h2>Department of Communication</h2>
-                    <p>School of Communication</p>
-                    <div class="department_btn">
-                        <a href="">
-                            <button>View Programmess</button>
-                        </a>
-                    </div>
+                    <h3>FACULTY OF SCIENCE</h>
+                        <p>Dept. Of Computer studies </p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
                 </div>
 
                 <div class="department_card">
-                    <h2>Department of Communication</h2>
-                    <p>School of Communication</p>
-                    <div class="department_btn">
-                        <a href="">
-                            <button>View Programmess</button>
-                        </a>
-                    </div>
+                    <h3>FACULTY OF SCIENCE</h>
+                        <p>Dept. Of Information Technology</p>
+                        <div class="department_btn">
+                            <a href="">
+                                <button>View Programmess</button>
+                            </a>
+                        </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -76,4 +103,5 @@
         <?php include 'footer.php'; ?>
     </section>
 </body>
+
 </html>

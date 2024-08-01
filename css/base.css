@@ -142,51 +142,68 @@ body {
     display: none;
 }
 
-.forms{
+.forms {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
 }
-.forms input{
+
+.forms input {
     height: 44px;
     width: 100%;
     border: 2px solid #ddd;
+    border-radius: 5px;
 }
-
-.forms button{
+.forms select{
+    height: 44px;
     height: 44px;
     width: 100%;
-    border:none;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.forms input:focus{
+    outline: none;
+}
+
+.forms select:focus{
+    outline: none;
+}
+.forms button {
+    height: 44px;
+    width: 100%;
+    border: none;
     background-color: #2C2C74;
     color: #fff;
 }
 
-.add_gallery{
+.add_gallery {
     padding: 0 25%;
 }
 
-.cta_all{
+.cta_all {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
     background-color: #f2f4f6;
     padding: 0 5%;
-    padding-block:  50px;
+    padding-block: 50px;
 
 }
 
-.cta_all button{
+.cta_all button {
     padding: 15px 45px;
     background-color: #2C2C74;
-   border: none;
+    border: none;
 
 }
-.cta_all a{
+
+.cta_all a {
     color: #fff;
 }
 
-.footer_grid{
+.footer_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -195,66 +212,77 @@ body {
     background-color: #2C2C74;
     color: goldenrod;
 }
-.ft_one{
+
+.ft_one {
     display: flex;
     flex-direction: column;
 }
-.ft_one a{
+
+.ft_one a {
     padding-top: 10px;
     color: #ddd;
 }
 
 
-.ft_one a{
+.ft_one a {
     display: flex;
-  align-items: center;
+    align-items: center;
     gap: 10px;
 }
 
-.ft_one i{
+.ft_one i {
     color: goldenrod;
 }
-.ft_one span i{
+
+.ft_one span i {
     color: #fff !important;
-   
+
 }
-.copyright{
+
+.copyright {
     padding: 0 5%;
     padding-block: 20px;
     text-align: center;
 }
-.hero_bg{
+
+.hero_bg {
     height: 50vh;
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-position: center;
 }
-.breadcrumb{
+
+.breadcrumb {
     width: 100%;
 }
-.breadcrumb a{
+
+.breadcrumb a {
     color: goldenrod;
 }
-.breadcrumb p{
+
+.breadcrumb p {
     color: #fff;
     font-weight: 700;
 }
-.hero_text{
+
+.hero_text {
     position: relative;
     height: 100%;
-    background-color:#2c2c7494 ;
+    background-color: #2c2c7494;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-padding: 0 7%;
+    padding: 0 7%;
 }
-.hero_text h1{
+
+.hero_text h1 {
     text-align: left;
     width: 100%;
     font-size: 40px;
     color: #fff;
 }
+
 @media only screen and (max-width: 1110px) {
 
 
@@ -316,11 +344,15 @@ padding: 0 7%;
         color: #2C2C74;
     }
 
+    .footer_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
 @media only screen and (max-width: 710px) {
-    .footer_all {
+    .footer_grid {
         display: grid;
         grid-template-columns: 1fr;
     }

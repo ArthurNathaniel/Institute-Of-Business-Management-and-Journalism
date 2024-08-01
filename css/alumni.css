@@ -1,8 +1,7 @@
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  margin-block: 80px;
+  padding: 0 7%;
 }
 
 h2 {
@@ -39,8 +38,7 @@ p {
     line-height: 1.6;
 }
 
-footer {
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
+.side_info{
+    margin-top: 50px;
 }
+

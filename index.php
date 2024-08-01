@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Institute of Business Management and Journalism. Explore our programs, admission process, and stay connected with our alumni.">
+    <meta name="keywords" content="IBM&J, media school, Ghana, business management, journalism, admission, alumni">
+    <meta name="author" content="Institute of Business Management and Journalism">
+    <title>Home - Institute of Business Management and Journalism</title>
   <?php include 'cdn.php' ?>
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/contact.css">
 </head>
 
 <body>
@@ -18,7 +22,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="hero_text">
-              <h1>Premier Accredited Communication School</h1>
+              <h1>Institute of Business Management & Journalism</h1>
               <p>
                 The only accredited communication school in the Ashanti Region, recognized by the National Accreditation Board, Ghana
               </p>
@@ -32,12 +36,12 @@
                 </a>
               </div>
             </div>
-            <img src="./images/hero_1.jpg" alt="">
+            <img src="./images/h.jpg" alt="">
           </div>
 
           <div class="swiper-slide">
             <div class="hero_text">
-              <h1>Excellence in Business and Journalism Education</h1>
+              <h1>Institute of Business Management & Journalism</h1>
               <p>
                 Affiliated with the National Board for Professional and Technical Examinations, we provide top-tier education in business and journalism.
               </p>
@@ -51,7 +55,7 @@
                 </a>
               </div>
             </div>
-            <img src="./images/hero_2.jpg" alt="">
+            <img src="./images/hero.jpg" alt="">
           </div>
 
           <div class="swiper-pagination"></div>
@@ -116,20 +120,20 @@
         <h1>What We Stand For</h1>
       </div>
       <div class="what_we_stanf_grid">
-        <div class="box">
+        <div class="boxs">
           <img src="./images/execellence.png" alt="">
           <h3>Excellence in Education</h3>
           <p>
             Top-notch training in Business, Marketing, Communication, Journalism, and Broadcasting.
           </p>
         </div>
-        <div class="box">
+        <div class="boxs">
           <img src="./images/accredited.png" alt="">
 
           <h3>Accredited and Recognized</h3>
           <p>Fully accredited and affiliated, ensuring top standards.</p>
         </div>
-        <div class="box">
+        <div class="boxs">
           <img src="./images/professional.png" alt="">
           <h3>Professional Development</h3>
           <p>Hands-on experience and skills for career excellence.</p>
@@ -149,8 +153,8 @@
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide programme_card">
-              <div class="programme_img">
-                <img src="./images/hero_2.jpg" alt="">
+              <div class="programme_img" style=" width:100%; object-fit: cover !important;">
+                <img src="./images/communication.jpg" alt="">
               </div>
               <div class="programme_details">
                 <h4>HND in Communication</h4>
@@ -165,7 +169,7 @@
 
             <div class="swiper-slide programme_card">
               <div class="programme_img">
-                <img src="./images/hero_2.jpg" alt="">
+                <img src="./images/marketing.jpg" alt="">
               </div>
               <div class="programme_details">
                 <h4>HND in Marketing</h4>
@@ -180,8 +184,8 @@
             </div>
 
             <div class="swiper-slide programme_card">
-              <div class="programme_img">
-                <img src="./images/hero_2.jpg" alt="">
+              <div class="programme_img" style=" width:100%; object-fit: cover !important;">
+                <img src="./images/journalism.jpg" alt="">
               </div>
               <div class="programme_details">
                 <h4>HND in Journalism</h4>
@@ -194,12 +198,13 @@
               </div>
             </div>
 
+          
             <div class="swiper-slide programme_card">
               <div class="programme_img">
-                <img src="./images/hero_2.jpg" alt="">
+                <img src="./images/radio.jpg" alt="">
               </div>
               <div class="programme_details">
-                <h4>HND in Radio & TV Broadcsting</h4>
+                <h4>HND in Public Relation</h4>
                 <p> <strong>Duration:</strong> <i>3 years</i></p>
                 <div class="programme_btn">
                   <a href="">
@@ -211,11 +216,25 @@
 
             <div class="swiper-slide programme_card">
               <div class="programme_img">
-                <img src="./images/hero_2.jpg" alt="">
+                <img src="./images/diploma.jpg" alt="">
               </div>
               <div class="programme_details">
                 <h4>Diploma in Radio & TV Broadcsting</h4>
-                <p> <strong>Duration:</strong> <i> 3 Months</i></p>
+                <p> <strong>Duration:</strong> <i> 2 years</i></p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide programme_card">
+              <div class="programme_img" style=" width:100%; object-fit: cover !important;">
+                <img src="./images/communication.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Diploma in Communication</h4>
+                <p> <strong>Duration:</strong> <i>2 years</i></p>
                 <div class="programme_btn">
                   <a href="">
                     <button>Read More</button>
@@ -224,6 +243,104 @@
               </div>
             </div>
 
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Diploma  in Marketing</h4>
+                <p><strong>Duration:</strong> <i>2 years</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+        
+
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Certificate - Script Writing</h4>
+                <p><strong>Duration:</strong> <i>6 Months Course</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Certificate - Photography</h4>
+                <p><strong>Duration:</strong> <i>6 Months Course</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Certificate - Film Editing</h4>
+                <p><strong>Duration:</strong> <i>6 Months Course</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Certificate - Film Acting & Directing</h4>
+                <p><strong>Duration:</strong> <i>6 Months Course</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide programme_card">
+              <div class="programme_img">
+                <img src="./images/marketing.jpg" alt="">
+              </div>
+              <div class="programme_details">
+                <h4>Certificate - Graphic Designing</h4>
+                <p><strong>Duration:</strong> <i>6 Months Course</i></p>
+                </p>
+                <div class="programme_btn">
+                  <a href="">
+                    <button>Read More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
 
           </div>
           <div class="swiper-pagination"></div>
@@ -275,48 +392,81 @@
   <section>
     <?php include 'gallery.php' ?>
   </section>
-  <section>
-    <div class="contact_all">
-      <div class="contact_title">
-        <h4><span><i class="fa-solid fa-minus"></i></span> GET IN TOUCH WITH US</h4>
-        <h1>Contact Us</h1>
-      </div>
-      <div class="contact_grid">
-        <div class="contact_box">
-          <img src="./images/call.png" alt="">
-          <a href="tel:054 217 0510">
-            <h1>+233 54 217 0510</h1>
-          </a>
-        </div>
-        <div class="contact_box">
-          <img src="./images/email.png" alt="">
-          <a href="mailto:info@ibmandj.org">
-            <h1>info@ibmandj.org</h1>
-          </a>
-        </div>
-        <div class="contact_box">
-          <img src="./images/location.png" alt="">
-          <a href="https://maps.app.goo.gl/VAyaeUS6mUQMxSrv6">
-            <h1>Krofrom near X5</h1>
-          </a>
-        </div>
-      </div>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="cta_all">
-      <h1>2024/2025 Admissions now Open</h1>
-      <a href="">
-        <button>
-          <a href="">APPLY NOW</a>
-        </button>
-      </a>
-    </div>
-  </section>
 
+  <section>
+        <div class="contact_all">
+            <div class="contact_grid">
+                <div class="contact_forms">
+                    <div class="form">
+                        <h4>Contact</h4>
+                        <span><i class="fa-solid fa-minus"></i></span>
+                    </div>
+                    <div class="forms">
+                        <h1>Keep in touch
+                        </h1>
+                    </div>
+                    <form action="">
+                        <div class="forms_grid">
+                            <div class="forms">
+                                <input type="text" placeholder="Your name">
+                            </div>
+                            <div class="forms">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="forms">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="forms">
+                                <input type="number" min='0' placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="forms message">
+                            <input type="text" placeholder="message">
+                        </div>
+                        <div class="form">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact_details">
+                    <div class="contact_box">
+                        <div class="boxx">
+                            <p class="circle">
+                                <i class="fa-solid fa-house"></i>
+                            </p>
+                            <p>Opp. Npp Regional Office near Sika fm, Krofrom, Kumasi</p>
+                        </div>
+                        <div class="boxx">
+                            <p class="circle">
+                            <i class="fa-solid fa-phone"></i>
+                            </p>
+                            <p><a href="tel:054 217 0510">+233 54 217 0510</a>
+                            <br>
+                                <a href="tel:054 217 0510">+233 54 217 0510</a>
+                            </p>
+
+                        </div>
+                        <div class="boxx">
+                            <p class="circle">
+                                <i class="fa-solid fa-house"></i>
+                            </p>
+                          
+                            <p><a href="mailto:info@ibmandj.org">info@ibmandj.org</a>
+                            <br>
+                                <a href="mailto:admission@ibmandj.org">admission@ibmandj.org</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
   <section>
     <?php include 'footer.php'; ?>
   </section>

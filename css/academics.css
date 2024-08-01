@@ -15,7 +15,7 @@ td {
     background-color: #f2f2f2;
 }
 .calendar_table{
-    padding: 0 20%;
+    padding: 0 7%;
     margin-block: 80px;
 }
 
@@ -55,3 +55,20 @@ td {
 .executive_council_all{
     padding: 0 7%;
 }
+
+
+@media only screen and (max-width: 1110px) {
+.department_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+}
+
+@media only screen and (max-width: 712px) {
+    .department_grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    }

@@ -76,14 +76,13 @@
                 <li>Proof of identification (e.g., National ID or Passport)</li>
                 <li>Recent passport-sized photograph</li>
             </ul>
-            <p>If you encounter any issues during the application process, please contact our admissions office at <a href="mailto:admissions@ibmj.edu.gh">admissions@ibmj.edu.gh</a>.</p>
+            <p>If you encounter any issues during the application process, please contact our admissions office at <a href="mailto:admissions@ibmandj.org">admissions@ibmandj.org</a>.</p>
         </div>
     </section>
 
     <section class="footer">
         <?php include 'footer.php'; ?>
     </section>
-
 </body>
 
 </html>
