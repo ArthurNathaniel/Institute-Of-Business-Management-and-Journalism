@@ -14,8 +14,8 @@
         <a href="event_management.php">Upcoming Events</a>
         <a href="add_news.php">Blog</a>
         <a href="add_gallery.php">Gallery</a>
-        <a href="">Governing Council</a>
-        <a href="">Calendar</a>
+        <a href="add_govering.php">Governing Council</a>
+        <a href="add_calendar.php">Calendar</a>
         <a href="">Handbook</a>
         <a href="">SRC</a>
         <a href="">Alumini</a>

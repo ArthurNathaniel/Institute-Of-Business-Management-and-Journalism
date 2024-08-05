@@ -6,9 +6,17 @@
     <title>Academic Calendar</title>
 
     <?php include 'cdn.php'?>
-    <link rel="stylesheet" href="./css/base.css"> 
-    <link rel="stylesheet" href="./css/academics.css">
+    <link rel="stylesheet" href="./css/sidebar.css"> 
+    <!-- <link rel="stylesheet" href="./css/academics.css"> -->
     <style>
+        .add_activity{
+            padding: 0 10%;
+            margin-top: 50px;
+        }
+        .calendar_all{
+            margin-top: 50px;
+            padding: 0 10%;
+        }
         /* Modal styles */
         .modal {
             display: none; 

@@ -18,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (file_exists($image_url)) {
                 unlink($image_url);
             }
-            echo "Member deleted successfully";
+  
+            echo "<script>alert('Member deleted successfully');</script>";
+
         } else {
             echo "Error: " . mysqli_error($conn);
         }
@@ -44,7 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES ('$name', '$position', '$image_path')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "New member added successfully";
+            
+            echo "<script>alert('New member added successfully');</script>";
+
         } else {
             echo "Error: " . mysqli_error($conn);
         }
@@ -63,9 +67,14 @@ function close_connection($conn) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Governing Council Member</title>
-    <link rel="stylesheet" href="./css/base.css"> 
+    <?php include 'cdn.php' ?>
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/about.css">
     <style>
+        .add_member{
+            padding: 0 10%;
+            margin-top: 50px;
+        }
         .governing_card {
             position: relative;
             /* Your existing styles */
@@ -87,6 +96,7 @@ function close_connection($conn) {
     </style>
 </head>
 <body>
+<?php include 'sidebar.php' ?>
 <div class="add_member">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="forms">
@@ -102,7 +112,7 @@ function close_connection($conn) {
             <input type="file" id="image" name="image" required>
         </div>
         <div class="forms">
-            <button type="submit">Add Member</button>
+            <button type="submit">Add Governing Council</button>
         </div>
     </form>
 </div>
