@@ -45,3 +45,55 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
+
+.add_events {
+    margin: 20px;
+}
+
+.forms {
+    margin-bottom: 15px;
+}
+
+.events_box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.events_box:hover .delete_button {
+    opacity: 1;
+}
+
+.delete_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.events_title {
+    margin: 0;
+}
+
+.events_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upcoming_event{
+    background-color: #2C2C74;
+    padding: 0 5%;
+    padding-block: 50px;
+    margin-top: 50px;
+    color: #fff;
+}

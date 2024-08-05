@@ -89,9 +89,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Image to Gallery</title>
     <?php include 'cdn.php' ?>
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/index.css">
     <style>
+        .add_gallery{
+            padding: 0 5%;
+            margin-top: 50px;
+        }
         .gallery {
             position: relative;
             display: inline-block;
@@ -117,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     </style>
 </head>
 <body>
+<?php include 'sidebar.php'; ?>
     <?php if ($message): ?>
         <script>alert("<?php echo nl2br($message); ?>");</script>
     <?php endif; ?>

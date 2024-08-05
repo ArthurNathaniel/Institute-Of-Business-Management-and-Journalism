@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Calendar</title>
+
+    <?php include 'cdn.php'?>
     <link rel="stylesheet" href="./css/base.css"> 
     <link rel="stylesheet" href="./css/academics.css">
     <style>
@@ -45,6 +47,7 @@
     </style>
 </head>
 <body>
+<?php include 'sidebar.php'; ?>
 <div class="add_activity">
     <form action="" method="post">
         <div class="forms">

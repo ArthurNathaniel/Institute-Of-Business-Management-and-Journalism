@@ -38,31 +38,55 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="Your Company Name">
     <title>Admin Login</title>
     <?php include 'cdn.php'; ?>
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 </head>
 
 <body>
-    <div class="container">
-        <h2>Admin Login</h2>
-        <form id="loginForm" action="admin_login.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="admin_signup.php">Sign up here</a></p>
-    </div>
+    <div class="login_all">
+        <div class="login_card_all">
+            <div class="login_logo">
+                <div class="logo"></div>
+            </div>
+            <div class="loin_forms">
 
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modal-message"><?php echo $loginMessage; ?></p>
+              <div class="forms">
+              <h2>Admin Login</h2>
+              </div>
+                <form id="loginForm" action="admin_login.php" method="post">
+                  <div class="forms">
+                      <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                  </div>
+                  <div class="forms">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password"  name="password" required>
+                  </div>
+                  <br>
+                  <div class="form">
+                        <input type="checkbox" id="showPin"> show pin
+                    </div>
+                    <div class="forms">
+                    <button type="submit">Login</button>
+                    </div>
+                </form>
+                <div class="forms">
+                    <hr>
+                    <br>
+                    <p style="text-align: center;">Email: ict@ibmandj.org</p>
+                </div>
+            </div>
+
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modal-message"><?php echo $loginMessage; ?></p>
+                </div>
+            </div>
         </div>
     </div>
-
     <script>
         const loginMessage = "<?php echo $loginMessage; ?>";
         if (loginMessage) {
@@ -72,7 +96,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         document.querySelector('.modal .close').onclick = function() {
             document.querySelector('.modal').style.display = 'none';
         };
+    
+        document.getElementById('showPin').addEventListener('change', function () {
+            var pinInput = document.getElementById('password');
+            if (this.checked) {
+                pinInput.type = 'text';
+            } else {
+                pinInput.type = 'password';
+            }
+        });
     </script>
+
+    
 </body>
 
 </html>

@@ -92,35 +92,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add News</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <?php include 'cdn.php'; ?>
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+<body>
+<?php include 'sidebar.php'; ?>
     <style>
-        .news {
-            position: relative;
-            display: inline-block;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        .news img {
-            display: block;
-            max-width: 100%;
-        }
-        .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: none;
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .news:hover .delete-btn {
-            display: block;
-        }
+      
     </style>
 </head>
 <body>

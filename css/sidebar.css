@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Onest", sans-serif;
+}
+
+body {
+    font-family: 'gilmer', sans-serif;
+    background-color: #fff;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Sora", sans-serif;
+
+}
+
+
+@font-face {
+    font-family: 'gilmer';
+    src: url('./gilmer.otf') format('opentype');
+}
+
+
+.sidebar_all {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-block: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+    z-index: 68;
+    overflow-y: scroll;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+    margin-block: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.ll {
+    border-top: 2px solid #534f4f2a;
+}
+
+.links a {
+    border-bottom: 2px solid #534f4f2a;
+    width: 100%;
+    padding: 0 10%;
+    text-decoration: none;
+    padding-block: 10px;
+    color: #000;
+    background-color: #f2f2f2;
+}
+
+.links h3 {
+    padding: 0 10%;
+    padding-block: 10px;
+    background-color: #2C2C74;
+    /* background-color: #5daa80; */
+    text-transform: uppercase;
+    color: #fff;
+    /* color: #000; */
+    font-size: 18px !important;
+    font-weight: 500;
+    margin: 0;
+}
+
+.links a:hover {
+    background-color: #2C2C74;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+#toggleButton {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    z-index: 332;
+    position: fixed;
+    background-color: #E4002B;
+    top: 0;
+}
+
+.log {
+    background-color: #E4002B;
+    color: #fff !important;
+}
+
+.log:hover {
+    background-color: #f2f2f2 !important;
+}
+
+#toggleButton i {
+    font-size: 20px;
+    color: #fff !important;
+}
+
+
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+ th,
+ td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+ th {
+    background-color: #2C2C74;
+    color: #fff;
+}
+
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.forms input {
+    height: 44px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+.forms select{
+
+    height: 44px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.forms input:focus{
+    outline: none;
+}
+
+.forms select:focus{
+    outline: none;
+}
+.forms button {
+    height: 44px;
+    width: 100%;
+    border: none;
+    background-color: #2C2C74;
+    color: #fff;
+}

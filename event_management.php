@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$title', '$date', '$time', '$location', '$content', '$media_path', '$media_type')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New event created successfully";
+        echo "<script>alert('New event created successfully');</script>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }
@@ -39,7 +39,8 @@ if (isset($_GET['delete'])) {
     $sql = "DELETE FROM events WHERE id = $event_id";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Event deleted successfully";
+        echo "<script>alert('Event deleted successfully');</script>";
+
     } else {
         echo "Error: " . mysqli_error($conn);
     }
@@ -58,56 +59,16 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Management</title>
-    <link rel="stylesheet" href="./css/base.css"> 
+    <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/events.css">
-    <style>
-        .add_events {
-            margin: 20px;
-        }
-
-        .forms {
-            margin-bottom: 15px;
-        }
-
-        .events_box {
-            position: relative;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .events_box:hover .delete_button {
-            opacity: 1;
-        }
-
-        .delete_button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            cursor: pointer;
-        }
-
-        .events_title {
-            margin: 0;
-        }
-
-        .events_flex {
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/sidebar.css">
 </head>
 <body>
+<?php include 'sidebar.php'; ?>
     <div class="add_events">
+        <div class="forms">
+            <h1>Add Upcoming Event</h1>
+        </div>
         <form action="event_management.php" method="post" enctype="multipart/form-data">
             <div class="forms">
                 <label for="title">Event Title:</label>
@@ -132,11 +93,12 @@ mysqli_close($conn);
             <div class="forms">
                 <label for="media">Event Media:</label>
                 <input type="file" id="media" name="media">
-                <input type="radio" id="image" name="media_type" value="image" checked>
+              
+            </div>
+            <input type="radio" id="image" name="media_type" value="image" checked>
                 <label for="image">Image</label>
                 <input type="radio" id="video" name="media_type" value="video">
                 <label for="video">Video</label>
-            </div>
             <div class="forms">
                 <button type="submit">Submit Event</button>
             </div>
