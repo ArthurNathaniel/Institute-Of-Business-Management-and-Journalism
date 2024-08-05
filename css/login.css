@@ -1,0 +1,58 @@
+.login_all{
+    background-color:#fff ;
+    padding: 0 12%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_card_all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login_logo{
+    background-color:#dddddd57 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_logo .logo{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    
+
+}
+.loin_forms{
+    padding: 0 5%;
+    padding-block: 50px;
+    background-color: #fff; 
+}
+
+.loin_forms h4{
+    text-transform: uppercase;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
+.forms input{
+    padding-left: 3%;
+}
+.form{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.forms button{
+    border-radius: 5px;
+}

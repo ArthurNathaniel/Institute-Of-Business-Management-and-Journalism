@@ -27,14 +27,16 @@
 
         </div>
     </section>
-    <div class="governing_council_all">
-        <?php
-        include 'db.php'; // Include your database connection
+  <section>
+  <div class="governing_council_all">
+    <?php
+    include 'db.php'; // Include your database connection
 
-        // Fetch governing council members from the database
-        $sql = "SELECT * FROM governing_council";
-        $result = mysqli_query($conn, $sql);
+    // Fetch governing council members from the database
+    $sql = "SELECT * FROM governing_council";
+    $result = mysqli_query($conn, $sql);
 
+    if (mysqli_num_rows($result) > 0) {
         while ($member = mysqli_fetch_assoc($result)) : ?>
             <div class="governing_card">
                 <div class="governing_image">
@@ -45,9 +47,15 @@
                     <p class="governing_position"><?php echo htmlspecialchars($member['position']); ?></p>
                 </div>
             </div>
-        <?php endwhile; ?>
-    </div>
+        <?php endwhile;
+    } else {
+        echo "<p>No governing council members found.</p>";
+    }
+    mysqli_close($conn); // Close the connection after fetching data
+    ?>
+</div>
 
+  </section>
     <section>
         <?php include 'footer.php'; ?>
     </section>

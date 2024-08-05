@@ -15,7 +15,7 @@
 
 <body>
     <?php include 'navbar.php'; ?>
-    
+
     <section class="hero_bg">
         <div class="hero_text">
             <h1>Online Admission</h1>
@@ -27,62 +27,69 @@
 
     <section class="application_form">
         <div class="container">
-            <h2>Apply Online</h2>
-            <p>Welcome to the online admission portal of IBM&J. Please fill out the form below to apply for your desired programme. Ensure that all information is accurate and complete before submitting.</p>
-            
-            <form action="submit_application.php" method="post" enctype="multipart/form-data">
-                <label for="full_name">Full Name:</label>
-                <input type="text" id="full_name" name="full_name" required>
+            <h2>For Ghanaians
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+            </h2>
+            <h3>Purchase Your Admission Forms
 
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" required>
+            </h3>
 
-                <label for="date_of_birth">Date of Birth:</label>
-                <input type="date" id="date_of_birth" name="date_of_birth" required>
+            <p>
+                To get started, click on the button below to purchase your admission forms:
 
-                <label for="programme">Programme of Interest:</label>
-                <select id="programme" name="programme" required>
-                    <option value="">Select a Programme</option>
-                    <option value="HND Communication">HND in Communication</option>
-                    <option value="HND Marketing">HND in Marketing</option>
-                    <option value="HND Journalism">HND in Journalism</option>
-                    <option value="HND Radio & TV Broadcasting">HND in Radio & TV Broadcasting</option>
-                    <option value="Diploma Radio & TV Broadcasting">Diploma in Radio & TV Broadcasting</option>
-                </select>
 
-                <label for="profile_picture">Profile Picture:</label>
-                <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
 
-                <label for="statement">Personal Statement:</label>
-                <textarea id="statement" name="statement" rows="5" required></textarea>
+            </p>
 
-                <label for="documents">Upload Supporting Documents:</label>
-                <input type="file" id="documents" name="documents[]" multiple required>
-
-                <button type="submit">Submit Application</button>
-            </form>
+            <div class="admission_btnss">
+                <a href="ghanaian_applicant_forms.php">
+                <button>Purchase admission forms</button>
+                </a>
+            </div>
         </div>
-    </section>
 
-    <section class="information">
         <div class="container">
-            <h2>Important Information</h2>
-            <p>Before you start your online application, please ensure you have the following documents ready:</p>
-            <ul>
-                <li>Certified copies of academic transcripts</li>
-                <li>Proof of identification (e.g., National ID or Passport)</li>
-                <li>Recent passport-sized photograph</li>
-            </ul>
-            <p>If you encounter any issues during the application process, please contact our admissions office at <a href="mailto:admissions@ibmandj.org">admissions@ibmandj.org</a>.</p>
+            <h2>For Non-Ghanaians
+
+
+            </h2>
+            <h3>Purchase Your Admission Forms
+
+
+
+            </h3>
+
+            <p>
+            To proceed, click on the button below to purchase your admission forms:
+
+
+
+
+            </p>
+
+            <div class="admission_btnss">
+                <a href="">
+                <button>Purchase admission forms</button>
+                </a>
+            </div>
+
         </div>
     </section>
 
+
+<br>
+<br>
+<br>
+<style>
+    .admission_btnss{
+        margin-top: 30px;
+    }
+</style>
     <section class="footer">
         <?php include 'footer.php'; ?>
     </section>
+
+  
 </body>
 
 </html>

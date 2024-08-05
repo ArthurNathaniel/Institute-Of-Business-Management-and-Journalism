@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section class="alumni_info">
         <div class="container">
-            <h2>Alumni</h2>
+            <h2>Information on Alumni</h2>
             <p>We cordially invite you to join our newly launched online Alumni Platform. The platform brings together our Alumni as a collective group, keeps you informed of current programs and activities of the college, and supports the Institute in a variety of ways.</p>
             <p><strong>Benefits for Alumni:</strong> Network, contact and keep in touch with old coursemates, gain access to jobs listed on the platform, participate in various forthcoming professional development opportunities, mentor students, create and access career services. We at IBM&J care for the success of our alumni.</p>
         </div>

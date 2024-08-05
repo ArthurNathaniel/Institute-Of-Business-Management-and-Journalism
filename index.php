@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Institute of Business Management and Journalism. Explore our programs, admission process, and stay connected with our alumni.">
-    <meta name="keywords" content="IBM&J, media school, Ghana, business management, journalism, admission, alumni">
-    <meta name="author" content="Institute of Business Management and Journalism">
-    <title>Home - Institute of Business Management and Journalism</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Institute of Business Management and Journalism. Explore our programs, admission process, and stay connected with our alumni.">
+  <meta name="keywords" content="IBM&J, media school, Ghana, business management, journalism, admission, alumni">
+  <meta name="author" content="Institute of Business Management and Journalism">
+  <title>Home - Institute of Business Management and Journalism</title>
   <?php include 'cdn.php' ?>
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/index.css">
@@ -16,7 +16,7 @@
 
 <body>
   <?php include 'navbar.php' ?>
-  <section>  
+  <section>
     <div class="hero_bg">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -97,23 +97,27 @@
         $sql = "SELECT * FROM events WHERE date >= '$current_date' ORDER BY date ASC";
         $result = mysqli_query($conn, $sql);
 
-        while ($event = mysqli_fetch_assoc($result)) {
-          echo '<div class="events_box" onclick="showEventDetails(' . $event['id'] . ')">';
-          echo '<p class="events_date"><i class="fa-solid fa-calendar-days"></i> ' . date('j F, Y', strtotime($event['date'])) . '</p>';
-          echo '<h1 class="events_title">' . htmlspecialchars($event['title']) . '</h1>';
-          echo '<div class="events_flex">';
-          echo '<p class="events_time"><i class="fa-regular fa-clock"></i> ' . date('h:i a', strtotime($event['time'])) . '</p>';
-          echo '<p class="events_location"><i class="fa-solid fa-location-dot"></i> ' . htmlspecialchars($event['location']) . '</p>';
-          echo '</div>';
-          echo '</div>';
+        if (mysqli_num_rows($result) > 0) {
+          while ($event = mysqli_fetch_assoc($result)) {
+            echo '<div class="events_box" onclick="showEventDetails(' . $event['id'] . ')">';
+            echo '<p class="events_date"><i class="fa-solid fa-calendar-days"></i> ' . date('j F, Y', strtotime($event['date'])) . '</p>';
+            echo '<h1 class="events_title">' . htmlspecialchars($event['title']) . '</h1>';
+            echo '<div class="events_flex">';
+            echo '<p class="events_time"><i class="fa-regular fa-clock"></i> ' . date('h:i a', strtotime($event['time'])) . '</p>';
+            echo '<p class="events_location"><i class="fa-solid fa-location-dot"></i> ' . htmlspecialchars($event['location']) . '</p>';
+            echo '</div>';
+            echo '</div>';
+          }
+        } else {
+          echo '<h4> <br><br> <br>  No upcoming events</h4>';
         }
 
         mysqli_close($conn);
         ?>
       </div>
-
     </div>
   </section>
+
   <section>
     <div class="what_stand_for_all">
       <div class="stand_heading">
@@ -198,7 +202,7 @@
               </div>
             </div>
 
-          
+
             <div class="swiper-slide programme_card">
               <div class="programme_img">
                 <img src="./images/radio.jpg" alt="">
@@ -248,7 +252,7 @@
                 <img src="./images/marketing.jpg" alt="">
               </div>
               <div class="programme_details">
-                <h4>Diploma  in Marketing</h4>
+                <h4>Diploma in Marketing</h4>
                 <p><strong>Duration:</strong> <i>2 years</i></p>
                 </p>
                 <div class="programme_btn">
@@ -259,7 +263,7 @@
               </div>
             </div>
 
-        
+
 
 
             <div class="swiper-slide programme_card">
@@ -352,7 +356,6 @@
       </div>
     </div>
   </section>
-
   <section>
     <div class="news_all">
       <div class="news_title">
@@ -368,105 +371,65 @@
       <div class="news_swiper">
         <div class="swiper mySwiper3">
           <div class="swiper-wrapper">
-            <?php while ($row = mysqli_fetch_assoc($result)) : ?>
-              <div class="swiper-slide news_card" onclick="showNewsDetails(<?php echo $row['id']; ?>)">
-                <div class="news_image">
-                  <img src="<?php echo $row['image']; ?>" alt="">
-                </div>
-                <div class="news_content">
-                  <div class="date">
-                    <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
+            <?php if (mysqli_num_rows($result) > 0) : ?>
+              <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                <div class="swiper-slide news_card" onclick="showNewsDetails(<?php echo $row['id']; ?>)">
+                  <div class="news_image">
+                    <img src="<?php echo $row['image']; ?>" alt="">
                   </div>
-                  <div class="title">
-                    <h4><?php echo $row['title']; ?></h4>
+                  <div class="news_content">
+                    <div class="date">
+                      <p><?php echo date('d M, Y', strtotime($row['date'])); ?></p>
+                    </div>
+                    <div class="title">
+                      <h4><?php echo htmlspecialchars($row['title']); ?></h4>
+                    </div>
                   </div>
                 </div>
-              </div>
-            <?php endwhile; ?>
+              <?php endwhile; ?>
+            <?php else : ?>
+              <p>No recent news</p>
+            <?php endif; ?>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
   </section>
+
   <section>
     <?php include 'gallery.php' ?>
   </section>
 
   <section>
-        <div class="contact_all">
-            <div class="contact_grid">
-                <div class="contact_forms">
-                    <div class="form">
-                        <h4>Contact</h4>
-                        <span><i class="fa-solid fa-minus"></i></span>
-                    </div>
-                    <div class="forms">
-                        <h1>Keep in touch
-                        </h1>
-                    </div>
-                    <form action="">
-                        <div class="forms_grid">
-                            <div class="forms">
-                                <input type="text" placeholder="Your name">
-                            </div>
-                            <div class="forms">
-                                <input type="email" placeholder="Email">
-                            </div>
-                            <div class="forms">
-                                <input type="text" placeholder="Subject">
-                            </div>
-                            <div class="forms">
-                                <input type="number" min='0' placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="forms message">
-                            <input type="text" placeholder="message">
-                        </div>
-                        <div class="form">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contact_details">
-                    <div class="contact_box">
-                        <div class="boxx">
-                            <p class="circle">
-                                <i class="fa-solid fa-house"></i>
-                            </p>
-                            <p>Opp. Npp Regional Office near Sika fm, Krofrom, Kumasi</p>
-                        </div>
-                        <div class="boxx">
-                            <p class="circle">
-                            <i class="fa-solid fa-phone"></i>
-                            </p>
-                            <p><a href="tel:054 217 0510">+233 54 217 0510</a>
-                            <br>
-                                <a href="tel:054 217 0510">+233 54 217 0510</a>
-                            </p>
-
-                        </div>
-                        <div class="boxx">
-                            <p class="circle">
-                                <i class="fa-solid fa-house"></i>
-                            </p>
-                          
-                            <p><a href="mailto:info@ibmandj.org">info@ibmandj.org</a>
-                            <br>
-                                <a href="mailto:admission@ibmandj.org">admission@ibmandj.org</a>
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.489528806891!2d-1.6186742255184505!3d6.709953220969604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb979891440c09%3A0x330dbd28233997e5!2sInstitute%20of%20Business%20Management%20%26%20Journalism%20(IBM%26J)!5e0!3m2!1sen!2sgh!4v1722256712017!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    </div>
-                </div>
-
+    <div class="accreditation_all">
+      <div class="accreditation_title">
+        <h1>Accreditation</h1>
+      </div>
+      <div class="accreditation_swiper">
+        <div class="swiper mySwiper4">
+          <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="./images/nab.jpg" alt="">
             </div>
+            <div class="swiper-slide">
+              <img src="./images/GTECLOGO.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/ctvet.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/nabptex.jpg" alt="">
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
   <section>
     <?php include 'footer.php'; ?>
   </section>

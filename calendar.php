@@ -29,47 +29,48 @@
     </section>
 
     <section>
-        <div class="calendar_table">
-            <div class="heading">
-                <h1>Academic Calendar </h1>
-            </div>
-            <table>
-                <tr>
-                    <th>SN</th>
-                    <th>ACTIVITY</th>
-                    <th>FROM</th>
-                    <th>TO</th>
-                </tr>
-                <?php
-                include 'db.php'; // Include your database connection
+    <div class="calendar_table">
+        <div class="heading">
+            <h1>Academic Calendar</h1>
+        </div>
+        <table>
+            <tr>
+                <th>SN</th>
+                <th>ACTIVITY</th>
+                <th>FROM</th>
+                <th>TO</th>
+            </tr>
+            <?php
+            include 'db.php'; // Include your database connection
 
-                // Handle form submission
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $activity = mysqli_real_escape_string($conn, $_POST['activity']);
-                    $from_date = mysqli_real_escape_string($conn, $_POST['from_date']);
-                    $to_date = mysqli_real_escape_string($conn, $_POST['to_date']);
+            // Handle form submission
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $activity = mysqli_real_escape_string($conn, $_POST['activity']);
+                $from_date = mysqli_real_escape_string($conn, $_POST['from_date']);
+                $to_date = mysqli_real_escape_string($conn, $_POST['to_date']);
 
-                    // Generate a new SN (Example: 1.0, 1.1, etc.)
-                    $query = "SELECT MAX(sn) AS max_sn FROM academic_calendar";
-                    $result = mysqli_query($conn, $query);
-                    $row = mysqli_fetch_assoc($result);
-                    $max_sn = $row['max_sn'];
-                    $new_sn = $max_sn ? (floatval($max_sn) + 0.1) : '1.0';
+                // Generate a new SN (Example: 1.0, 1.1, etc.)
+                $query = "SELECT MAX(sn) AS max_sn FROM academic_calendar";
+                $result = mysqli_query($conn, $query);
+                $row = mysqli_fetch_assoc($result);
+                $max_sn = $row['max_sn'];
+                $new_sn = $max_sn ? (floatval($max_sn) + 0.1) : '1.0';
 
-                    $sql = "INSERT INTO academic_calendar (sn, activity, from_date, to_date)
-                        VALUES ('$new_sn', '$activity', '$from_date', '$to_date')";
+                $sql = "INSERT INTO academic_calendar (sn, activity, from_date, to_date)
+                    VALUES ('$new_sn', '$activity', '$from_date', '$to_date')";
 
-                    if (mysqli_query($conn, $sql)) {
-                        echo "<p>New activity added successfully</p>";
-                    } else {
-                        echo "<p>Error: " . mysqli_error($conn) . "</p>";
-                    }
+                if (mysqli_query($conn, $sql)) {
+                    echo "<p>New activity added successfully</p>";
+                } else {
+                    echo "<p>Error: " . mysqli_error($conn) . "</p>";
                 }
+            }
 
-                // Fetch academic calendar entries from the database
-                $sql = "SELECT * FROM academic_calendar ORDER BY sn ASC";
-                $result = mysqli_query($conn, $sql);
+            // Fetch academic calendar entries from the database
+            $sql = "SELECT * FROM academic_calendar ORDER BY sn ASC";
+            $result = mysqli_query($conn, $sql);
 
+            if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) :
                     // Extract major and minor parts of SN
                     $sn_parts = explode('.', $row['sn']);
@@ -78,19 +79,24 @@
 
                     // Generate formatted SN
                     $formatted_sn = sprintf('%s.%s', $current_major, $minor);
-                ?>
+            ?>
                     <tr>
                         <td><?php echo htmlspecialchars($formatted_sn); ?></td>
                         <td><?php echo htmlspecialchars($row['activity']); ?></td>
                         <td><?php echo htmlspecialchars($row['from_date']); ?></td>
                         <td><?php echo htmlspecialchars($row['to_date']); ?></td>
                     </tr>
-                <?php endwhile;
-                mysqli_close($conn); // Close the connection after fetching data
-                ?>
-            </table>
-        </div>
-    </section>
+            <?php
+                endwhile;
+            } else {
+                echo "<tr><td colspan='4'>No activities found.</td></tr>";
+            }
+            mysqli_close($conn); // Close the connection after fetching data
+            ?>
+        </table>
+    </div>
+</section>
+
 
     <section>
         <?php include 'footer.php'; ?>

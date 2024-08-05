@@ -411,7 +411,28 @@
   margin-top: 50px;
 }
 
+.accreditation_all{
+  padding: 0 7%;
+  padding-block: 50px;
 
+}
+
+.accreditation_title{
+  text-align: center;
+}
+.accreditation_title h1{
+  font-size: 45px;
+}
+.mySwiper4 img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.mySwiper4 .swiper-slide{
+padding-block: 20px;
+margin-block: 30px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 @media only screen and (max-width: 1110px) {
   .about_us_home_all {
     display: flex;

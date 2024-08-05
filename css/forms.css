@@ -1,0 +1,46 @@
+.all{
+    padding: 0 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f6f8;
+ }
+ .buy{
+    background-color: #fff;
+    padding: 0 5%;
+    padding-block: 50px;
+ }
+ .buy .logo{
+    margin: auto;
+    margin-bottom: 20px;
+ }
+ .buy h2, p{
+    text-align: center;
+    margin-top: 20px;
+ }
+ .buy span{
+    color: red;
+  
+ }
+ form{
+    width: 100%;
+ }
+
+ .forms button{
+    border-radius: 5px;
+ }
+
+ .confirmation {
+    width: 100%;
+    text-align: left !important;
+    background-color: #fff;
+    padding: 0 5%;
+    padding-block: 50px;
+
+ }
+
+ .confirmation p{
+    text-align: left;
+ }

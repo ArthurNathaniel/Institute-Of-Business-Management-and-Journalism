@@ -103,3 +103,96 @@ section {
 #admission-forms {
     background-color: #f9f9f9;
 }
+
+
+.form-step {
+    display: none;
+    padding: 0 5%;
+}
+.form-step-active {
+    display:flex;
+    flex-direction: column;
+
+}
+/* .form-step-active label{
+    margin-top: 30px;
+} */
+/* .form-step-active input{
+    height: 44px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-step-active select{
+    height: 44px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+} */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th{
+    background-color: #2C2C74;
+    color: #fff;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+.buttons button{
+    padding: 15px 45px;
+    background-color: #2C2C74;
+    color: #fff;
+    border: none;
+}
+
+#multiStepForm{
+    padding-block: 50px;
+}
+/* form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
+.add{
+    padding: 15px 45px;
+    margin-top: 30px;
+    background-color: #2C2C74;
+    color: #fff;
+    border: none;
+}
+
+.delete{
+    background-color: red;
+    padding: 15px 45px;
+    color: #fff;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+
+select:focus{
+    outline: none;
+}
+
+.forms_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;
+}
+
+table .forms{
+    margin: 0;
+    margin-block: 10px;
+}

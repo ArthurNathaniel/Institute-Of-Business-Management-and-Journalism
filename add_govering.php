@@ -98,7 +98,7 @@ function close_connection($conn) {
             <input type="text" id="position" name="position" required>
         </div>
         <div class="forms">
-            <label for="image">Image:</label>
+            <label for="image">Image: (250 by 200)</label>
             <input type="file" id="image" name="image" required>
         </div>
         <div class="forms">

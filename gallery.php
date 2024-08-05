@@ -47,6 +47,9 @@ include 'db.php';
         }
         ?>
     </div>
+    <br>
+    <br>
+    <br>
     <div class="gallery_btn">
         <button id="viewAllButton">View All Images</button>
     </div>

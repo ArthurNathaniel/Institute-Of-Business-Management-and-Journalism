@@ -33,7 +33,16 @@ function close_connection($conn) {
             </div>
         </div>
     </section>
+<style>
+  .heading{
+    text-align: center;
+    margin-top: 50px;
+  }
+</style>
 
+<div class="heading">
+   <h1> The Current SRC Executives</h1>
+</div>
     <div class="executive_council_all">
     <?php
     // Fetch SRC executives from the database
