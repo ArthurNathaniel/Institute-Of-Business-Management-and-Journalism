@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['handbook'])) {
         if (in_array($fileType, $allowedTypes)) {
             if ($fileSize <= $maxFileSize) {
                 // Generate unique file name to avoid conflicts
-                $fileDestination = 'uploads/' . uniqid('', true) . '-' . $fileName;
+                $fileDestination = 'handbook/' . uniqid('', true) . '-' . $fileName;
 
                 // Move file to the destination
                 if (move_uploaded_file($fileTmpName, $fileDestination)) {
@@ -44,10 +44,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['handbook'])) {
     }
 }
 
-// Fetch the latest handbook from the database
-$sql = "SELECT * FROM handbooks ORDER BY id DESC LIMIT 1";
+// Handle file deletion
+if (isset($_GET['delete'])) {
+    $id = intval($_GET['delete']);
+    $sql = "SELECT file_path FROM handbooks WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $file = mysqli_fetch_assoc($result);
+
+    if ($file) {
+        $filePath = $file['file_path'];
+        if (unlink($filePath)) {
+            $sql = "DELETE FROM handbooks WHERE id = $id";
+            if (mysqli_query($conn, $sql)) {
+                $uploadMessage = "<p>Handbook deleted successfully.</p>";
+            } else {
+                $uploadMessage = "<p>Error: " . mysqli_error($conn) . "</p>";
+            }
+        } else {
+            $uploadMessage = "<p>Error: Failed to delete file.</p>";
+        }
+    } else {
+        $uploadMessage = "<p>Error: File not found.</p>";
+    }
+}
+
+// Fetch all handbooks from the database
+$sql = "SELECT * FROM handbooks ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
-$handbook = mysqli_fetch_assoc($result);
+$handbooks = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 mysqli_close($conn); // Close the database connection
 ?>
@@ -58,65 +82,88 @@ mysqli_close($conn); // Close the database connection
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students Handbook</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <?php include 'cdn.php'?>
+    <link rel="stylesheet" href="./css/sidebar.css"> 
     <link rel="stylesheet" href="./css/calendar.css">
     <style>
-        /* Additional styles for file upload */
         .handbook_all {
-            margin: 20px;
+            padding: 0 5%;
+            margin-top:50px;
         }
-
         .form-section {
             margin: 20px 0;
         }
-
         .file-upload {
             margin: 10px 0;
         }
-
         .file-upload input[type="file"] {
             display: inline;
+            height: 44px;
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
         }
-
-        .file-upload input[type="submit"] {
+        .form-section button {
             margin-top: 10px;
+            height: 44px;
+            width: 100%;
+            border: none;
+            background-color: #2C2C74;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <section>
-        <div class="handbook_all">
-            <h2>Students Handbook</h2>
+<?php include 'sidebar.php'; ?>
+<section>
+    <div class="handbook_all">
+        <h2>Students Handbook</h2>
 
-            <div class="filename">
-                <h4>2023/2024 handbook</h4>
-            </div>
-            <div class="file">
-                <!-- Display the uploaded file if available -->
-                <?php if ($handbook): ?>
-                    <p>Latest Handbook: <a href="<?php echo htmlspecialchars($handbook['file_path']); ?>" download>Download</a></p>
-                <?php else: ?>
-                    <p>No handbook available.</p>
+        <div class="file_download">
+            <!-- Form for uploading a new handbook -->
+            <div class="form-section">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="file-upload">
+                        <label for="handbook">Upload New Handbook:</label>
+                        <input type="file" id="handbook" name="handbook" accept=".pdf" required>
+                    </div>
+                    <div class="form-section">
+                        <button type="submit" name="upload">Upload Handbook</button>
+                    </div>
+                </form>
+                <?php if ($uploadMessage): ?>
+                    <div><?php echo $uploadMessage; ?></div>
                 <?php endif; ?>
             </div>
-            <div class="file_download">
-                <!-- Form for uploading a new handbook -->
-                <div class="form-section">
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="file-upload">
-                            <label for="handbook">Upload New Handbook:</label>
-                            <input type="file" id="handbook" name="handbook" accept=".pdf" required>
-                        </div>
-                        <div class="form-section">
-                            <button type="submit" name="upload">Upload Handbook</button>
-                        </div>
-                    </form>
-                    <?php if ($uploadMessage): ?>
-                        <div><?php echo $uploadMessage; ?></div>
-                    <?php endif; ?>
-                </div>
-            </div>
         </div>
-    </section>
+
+        <br><br><br>
+
+        <!-- Display the uploaded files in a table format -->
+        <table>
+            <thead>
+                <tr>
+              
+                    <th>File Path</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($handbooks)): ?>
+                    <tr>
+                        <td colspan="3">No handbooks available.</td>
+                    </tr>
+                <?php else: ?>
+                    <?php foreach ($handbooks as $handbook): ?>
+                        <tr>
+                            <td><a href="<?php echo htmlspecialchars($handbook['file_path']); ?>" download>Download</a></td>
+                            <td><a href="?delete=<?php echo htmlspecialchars($handbook['id']); ?>" onclick="return confirm('Are you sure you want to delete this file?');">Delete</a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
 </body>
 </html>

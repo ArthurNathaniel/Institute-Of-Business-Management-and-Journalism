@@ -63,7 +63,8 @@ function close_connection($conn) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRC Executives</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <?php include 'cdn.php'?>
+    <link rel="stylesheet" href="./css/sidebar.css"> 
     <link rel="stylesheet" href="./css/about.css">
     <style>
         .executive_card {
@@ -83,9 +84,15 @@ function close_connection($conn) {
         .executive_card:hover .delete_button {
             display: block;
         }
+        .add_executive{
+            padding: 0 7%;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
+<?php include 'sidebar.php'; ?>
+
 <div class="add_executive">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="forms">

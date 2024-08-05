@@ -16,9 +16,9 @@
         <a href="add_gallery.php">Gallery</a>
         <a href="add_govering.php">Governing Council</a>
         <a href="add_calendar.php">Calendar</a>
-        <a href="">Handbook</a>
-        <a href="">SRC</a>
-        <a href="">Alumini</a>
+        <a href="add_handbook.php">Handbook</a>
+        <a href="add_src.php">SRC</a>
+        <a href="view_alumni.php">Alumini</a>
         <a href="">Live</a>
       
         <a href="admin_logout.php">
