@@ -23,6 +23,8 @@
 
         .swiper-slide {
             position: relative;
+            background-color: #fff;
+            
         }
 
         .swiper-slide:hover .delete-btn {
@@ -82,7 +84,7 @@
         // Insert the data into the database
         $sql = "INSERT INTO testimonials (name, status, testimonial) VALUES ('$name', '$status', '$testimonial')";
         if (mysqli_query($conn, $sql)) {
-            echo "Testimonial added successfully!";
+            echo "<script>alert('Testimonial added successfully!');</script>";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

@@ -8,9 +8,8 @@
     <br>
     <div class="links">
         <h3> <span class="icon"><i class="fa-solid fa-chart-simple"></i></span> Admin</h3>
-        <a href="">Dashboard</a>
-        <a href="view_payments.php">Admission Forms</a>
-        <a href="">Admission</a>
+        <a href="admin_dashboard.php">Dashboard</a>
+        <a href="view_payments.php">Admission Forms Records</a>
         <a href="event_management.php">Upcoming Events</a>
         <a href="add_news.php">Blog</a>
         <a href="add_gallery.php">Gallery</a>
@@ -19,7 +18,7 @@
         <a href="add_handbook.php">Handbook</a>
         <a href="add_src.php">SRC</a>
         <a href="view_alumni.php">Alumini</a>
-        <a href="">Live</a>
+        <a href="add_live_link.php">Live</a>
       
         <a href="admin_logout.php">
                 <h3> <i class="fas fa-sign-out-alt"></i> LOGOUT

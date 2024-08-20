@@ -17,51 +17,65 @@
 <body>
   <?php include 'navbar.php' ?>
   <section>
-    <div class="hero_bg">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="hero_text">
-              <h1>Institute of Business Management & Journalism</h1>
-              <p>
-                The only accredited communication school in the Ashanti Region, recognized by the National Accreditation Board, Ghana
-              </p>
-              <div class="hero_btn">
-                <a href="">
-                  <button>Apply Now</button>
-                </a>
+        <div class="hero_bg">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <?php
+                    include 'db.php'; // Include your database connection file
 
-                <a href="">
-                  <button class="live">Go Live</button>
-                </a>
-              </div>
+                    // Fetch the Go Live link from the database
+                    $sql = "SELECT go_live_link FROM settings WHERE id = 1";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($result);
+                    $go_live_link = $row ? $row['go_live_link'] : '#'; // Default to # if no link found
+
+                    // Close the database connection
+                    mysqli_close($conn);
+                    ?>
+
+                    <div class="swiper-slide">
+                        <div class="hero_text">
+                            <h1>Institute of Business Management & Journalism</h1>
+                            <p>
+                                The only accredited communication school in the Ashanti Region, recognized by the National Accreditation Board, Ghana
+                            </p>
+                            <div class="hero_btn">
+                                <a href="apply.php">
+                                    <button>Apply Now</button>
+                                </a>
+
+                                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
+                                    <button class="live">Go Live</button>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="./images/h.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="hero_text">
+                            <h1>Institute of Business Management & Journalism</h1>
+                            <p>
+                                Affiliated with the National Board for Professional and Technical Examinations, we provide top-tier education in business and journalism.
+                            </p>
+                            <div class="hero_btn">
+                                <a href="apply.php">
+                                    <button>Apply Now</button>
+                                </a>
+
+                                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
+                                    <button class="live">Go Live</button>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="./images/hero.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-            <img src="./images/h.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <div class="hero_text">
-              <h1>Institute of Business Management & Journalism</h1>
-              <p>
-                Affiliated with the National Board for Professional and Technical Examinations, we provide top-tier education in business and journalism.
-              </p>
-              <div class="hero_btn">
-                <a href="">
-                  <button>Apply Now</button>
-                </a>
-
-                <a href="">
-                  <button class="live">Go Live</button>
-                </a>
-              </div>
-            </div>
-            <img src="./images/hero.jpg" alt="">
-          </div>
-
-          <div class="swiper-pagination"></div>
         </div>
-      </div>
-  </section>
+    </section>
   <section>
     <div class="about_us_home_all">
       <div class="home_about_text">

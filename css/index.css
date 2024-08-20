@@ -60,7 +60,7 @@
 
 .live {
 
-
+cursor: pointer;
   background-color: #ED1B24 !important;
   color: #fff;
 }
@@ -479,11 +479,11 @@
 }
 
 .student_slide {
-  border: 2px dashed #2C2C74;
+  /* border: 2px dashed #2C2C74; */
   width: 100%;
   margin-block: 50px;
   padding: 20px;
-background-color: transparent;
+background-color:#FFF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -491,6 +491,7 @@ background-color: transparent;
   text-align: left;
   align-items: flex-start;
   height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .student_testimonial p {
@@ -500,8 +501,8 @@ background-color: transparent;
 
 .student_status p {
   margin-top: 5px;
-  font-size: 16px;
-  font-style: italic;
+  font-size: 14px;
+  /* font-style: italic; */
 }
 
 .student_name h4 {

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin'])) {
+    // Redirect to login page
+    header("Location: admin_login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +120,8 @@
                         VALUES ('$new_sn', '$activity', '$from_date', '$to_date')";
 
                 if (mysqli_query($conn, $sql)) {
-                    echo "<p>New activity added successfully</p>";
+                    echo "<script>alert('New activity added successfully');</script>";
+
                 } else {
                     echo "<p>Error: " . mysqli_error($conn) . "</p>";
                 }

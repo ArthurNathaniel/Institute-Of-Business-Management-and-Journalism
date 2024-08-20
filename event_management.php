@@ -1,7 +1,13 @@
 <!-- event_management.php -->
 <?php
 include 'db.php'; // Include your database connection
-
+session_start();
+// Check if the admin is logged in
+if (!isset($_SESSION['admin'])) {
+    // Redirect to login page
+    header("Location: admin_login.php");
+    exit();
+}
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];

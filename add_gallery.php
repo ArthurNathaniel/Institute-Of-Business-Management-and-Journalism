@@ -1,6 +1,12 @@
 <?php
 include 'db.php';
-
+session_start();
+// Check if the admin is logged in
+if (!isset($_SESSION['admin'])) {
+    // Redirect to login page
+    header("Location: admin_login.php");
+    exit();
+}
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
