@@ -29,11 +29,16 @@
         <div class="container">
             <h2>General Entry Requirements</h2>
             <p>At IBM&J, we welcome applications from students with a variety of qualifications. Our entry requirements ensure that all applicants have the necessary skills and knowledge to succeed in their chosen programme. Please review the specific entry requirements for each programme below.</p>
-            <!-- Add specific entry requirements here -->
+            <ul>
+                <li>SSCE: Aggregate 24 or better - Core Maths, English & Science + THREE (3) Electives</li>
+                <li>WASSCE: Aggregate 36 or better - Core Maths, English & Science + THREE (3) Electives</li>
+                <li>GCE Ordinary Level: 5 “O” & “A” + 2 years working Experience</li>
+                <li>MATURE APPLICANT: 25 years & Above</li>
+            </ul>
         </div>
     </section>
 
-    <section id="how-to-apply">
+    <!-- <section id="how-to-apply">
         <div class="container">
             <h2>How to Apply</h2>
             <p>Applying to IBM&J is a straightforward process. Follow the steps below to submit your application:</p>
@@ -44,18 +49,44 @@
                 <li>Wait for a confirmation email with further instructions.</li>
             </ol>
         </div>
-    </section>
+    </section> -->
 
     <section id="our-programmes">
         <div class="container">
             <h2>Our Programmes</h2>
             <p>IBM&J offers a range of programmes designed to equip students with the skills needed in the media and business industries. Our programmes include:</p>
             <ul>
-                <li>HND in Communication</li>
-                <li>HND in Marketing</li>
-                <li>HND in Journalism</li>
-                <li>HND in Radio & TV Broadcasting</li>
-                <li>Diploma in Radio & TV Broadcasting</li>
+                <li>HND PROGRAMMES - 3 YEARS
+                    <ul>
+                        <li>Communication</li>
+                        <li>Marketing</li>
+                        <li>Public Relations</li>
+                        <li>Journalism</li>
+                    </ul>
+                </li>
+                <li>DIPLOMA PROGRAMMES - 2 YEARS
+                    <ul>
+                        <li>Journalism</li>
+                        <li>Marketing</li>
+                        <li>Public Relations</li>
+                    </ul>
+                </li>
+                <li>CERTIFICATE PROGRAMMES - 6 MONTHS
+                    <ul>
+                        <li>Script Writing</li>
+                        <li>Photography</li>
+                        <li>Film Editing</li>
+                        <li>Film Acting & Directing</li>
+                        <li>Graphic Designing</li>
+                    </ul>
+                </li>
+                <li>PROPOSED HND PROGRAMMES - 3 YEARS
+                    <ul>
+                        <li>Investigative Journalism</li>
+                        <li>Secretaryship in Management</li>
+                        <li>Business Administration</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </section>
@@ -69,17 +100,14 @@
                 <li>Mobile money</li>
                 <li>Credit/Debit card payments</li>
             </ul>
-            <p>Ensure that you retain your payment receipt for verification purposes.</p>
+            <p>Ensure that you retain your payment receipt for verification purposes. Admission and tuition fees can be paid in full or 50% of the fee must be made into the following bank account details provided:</p>
+            <p><strong>Institute of Business Management & Journalism</strong><br>
+            Odotobri Rural Bank Ltd.<br>
+            A/C NO: 6150701003133011</p>
         </div>
     </section>
 
-    <section id="admission-forms">
-        <div class="container">
-            <h2>Comprehensive Admission Forms</h2>
-            <p>You can download the comprehensive admission forms below. Fill them out and submit them along with the required documents to complete your application.</p>
-            <a href="path/to/admission_form.pdf" class="download-button" download>Download Admission Form</a>
-        </div>
-    </section>
+ 
 
     <?php include 'footer.php'; ?>
 

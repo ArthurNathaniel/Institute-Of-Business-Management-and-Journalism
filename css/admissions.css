@@ -196,3 +196,19 @@ table .forms{
     margin: 0;
     margin-block: 10px;
 }
+
+
+@media only screen and (max-width: 1110px) {
+    .forms_group{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+
+@media only screen and (max-width: 710px) {
+    .forms_group{
+        display: grid;
+        grid-template-columns: 1fr ; 
+    }
+}

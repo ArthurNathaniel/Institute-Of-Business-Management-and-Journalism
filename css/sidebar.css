@@ -85,10 +85,8 @@ h6 {
     padding: 0 10%;
     padding-block: 10px;
     background-color: #2C2C74;
-    /* background-color: #5daa80; */
     text-transform: uppercase;
     color: #fff;
-    /* color: #000; */
     font-size: 18px !important;
     font-weight: 500;
     margin: 0;
@@ -110,7 +108,7 @@ h6 {
     position: absolute;
     z-index: 332;
     position: fixed;
-    background-color: #E4002B;
+    background-color: #2C2C74;
     top: 0;
 }
 

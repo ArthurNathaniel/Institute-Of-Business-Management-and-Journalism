@@ -119,6 +119,36 @@
   </section>
 
   <section>
+    <div class="apply_page">
+      <div class="apply_loan_box">
+        <h1>Apply for Student Loan</h1>
+        <p>
+          Apply for a Student Loan at the Institute of Business Management & Journalism. To apply, click the button below.
+        </p>
+        <div class="apply_btn">
+          <a href="">
+            <button>
+              Apply Now
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="apply_scholarship_box">
+        <h1>Apply for Scholarship</h1>
+        <p>
+          Apply for a Scholarship at the Institute of Business Management & Journalism. To apply, click the button below </p>
+        <div class="apply_btn">
+          <a href="">
+            <button>
+              Apply Now
+            </button>
+          </a>
+        </div>
+
+      </div>
+  </section>
+
+  <section>
     <div class="what_stand_for_all">
       <div class="stand_heading">
         <h1>What We Stand For</h1>
@@ -409,7 +439,7 @@
       <div class="accreditation_swiper">
         <div class="swiper mySwiper4">
           <div class="swiper-wrapper">
-          <div class="swiper-slide">
+            <div class="swiper-slide">
               <img src="./images/nab.jpg" alt="">
             </div>
             <div class="swiper-slide">
@@ -430,6 +460,45 @@
     </div>
   </section>
 
+  <section>
+    <div class="what_our_students_say_all">
+      <div class="students_title">
+        <h1> What Our Students Say </h1>
+        <p>Here's what our students say—past and present—about their experience at the Institute of
+          Business Management & Journalism
+        </p>
+      </div>
+      <div class="students_swiper">
+        <div class="swiper mySwiper5">
+          <div class="swiper-wrapper">
+          <?php
+            include 'db.php'; // Include your database connection file
+
+            $sql = "SELECT * FROM testimonials";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<div class="swiper-slide student_slide">';
+                    echo '<div class="student_name"><h4>' . $row['name'] . '</h4></div>';
+                    echo '<div class="student_status"><p>' . $row['status'] . '</p></div>';
+                    echo '<div class="student_testimonial"><p>"' . $row['testimonial'] . '"</p></div>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p>No testimonials available.</p>';
+            }
+
+            // Close the database connection
+            mysqli_close($conn);
+            ?>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <?php include 'footer.php'; ?>
   </section>

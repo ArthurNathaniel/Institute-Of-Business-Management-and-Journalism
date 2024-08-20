@@ -27,9 +27,7 @@
 
     <section class="application_form">
         <div class="container">
-            <h2>For Ghanaians
-
-            </h2>
+            <h2>For Ghanaians / Non-Ghanaians</h2>
             <h3>Purchase Your Admission Forms
 
             </h3>
@@ -42,39 +40,13 @@
             </p>
 
             <div class="admission_btnss">
-                <a href="ghanaian_applicant_forms.php">
+                <a href="purchase_admissions_forms.php">
                 <button>Purchase admission forms</button>
                 </a>
             </div>
         </div>
 
-        <div class="container">
-            <h2>For Non-Ghanaians
 
-
-            </h2>
-            <h3>Purchase Your Admission Forms
-
-
-
-            </h3>
-
-            <p>
-            To proceed, click on the button below to purchase your admission forms:
-
-
-
-
-            </p>
-
-            <div class="admission_btnss">
-                <a href="">
-                <button>Purchase admission forms</button>
-                </a>
-            </div>
-
-        </div>
-    </section>
 
 
 <br>

@@ -66,14 +66,18 @@
                             <p class="circle">
                                 <i class="fa-solid fa-house"></i>
                             </p>
-                            <p>Opp. Npp Regional Office near Sika fm, Krofrom, Kumasi</p>
+                            <p><b>MAIN CAMPUS :</b> Opposite npp regional office near sika fm krofrom, kumasi
+                            <br>
+                            <b>NEW CAMPUS:</b> Amanfrom, near amanfrom hospital, barekese road
+                            <br>
+                            <b>NEW CAMPUS:</b> Tamale learning centre, kanvili - tunayili </p>
                         </div>
                         <div class="boxx">
                             <p class="circle">
-                            <i class="fa-solid fa-phone"></i>
+                                <i class="fa-solid fa-phone"></i>
                             </p>
                             <p><a href="tel:054 217 0510">+233 54 217 0510</a>
-                            <br>
+                                <br>
                                 <a href="tel:054 217 0510">+233 54 217 0510</a>
                             </p>
 
@@ -82,9 +86,9 @@
                             <p class="circle">
                                 <i class="fa-solid fa-house"></i>
                             </p>
-                          
+
                             <p><a href="mailto:info@ibmandj.org">info@ibmandj.org</a>
-                            <br>
+                                <br>
                                 <a href="mailto:admission@ibmandj.org">admission@ibmandj.org</a>
                             </p>
                         </div>

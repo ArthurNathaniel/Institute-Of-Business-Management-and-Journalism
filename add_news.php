@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
 <body>
 <?php include 'sidebar.php'; ?>
     <style>
-      
+
     </style>
 </head>
 <body>

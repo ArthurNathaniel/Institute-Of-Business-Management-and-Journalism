@@ -37,7 +37,7 @@
         <div class="dropdown">
             <a href="#">Admission <span><i class="fa-solid fa-angle-down"></i></span></a>
             <div class="dropdown-content">
-                <a href="admission.php">How to apply</a>
+                <a href="admission.php">General Entry Requirements</a>
                 <a href="online_admission.php">Online Admission</a>
             </div>
         </div>

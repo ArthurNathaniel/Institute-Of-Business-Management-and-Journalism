@@ -9,22 +9,14 @@
     <meta name="author" content="Institute of Business Management and Journalism">
     <title>View Alumni - Institute of Business Management and Journalism</title>
     <?php include 'cdn.php'; ?>
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/alumni.css">
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
+ 
 
-    <section class="hero_bg">
-        <div class="hero_text">
-            <h1>View Alumni</h1>
-            <div class="breadcrumb">
-                <p><a href="index.php">Home</a> / View Alumni</p>
-            </div>
-        </div>
-    </section>
-
+    <?php include 'sidebar.php'; ?>
     <section class="alumni_list">
         <div class="container">
             <h2>All Alumni</h2>
@@ -69,7 +61,7 @@
         </div>
     </div>
 
-    <?php include 'footer.php'; ?>
+   
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

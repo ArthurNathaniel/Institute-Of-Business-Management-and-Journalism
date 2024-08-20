@@ -97,3 +97,13 @@ body {
     margin-top: 50px;
     color: #fff;
 }
+
+.forms textarea{
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea:focus{
+    outline: none;
+}

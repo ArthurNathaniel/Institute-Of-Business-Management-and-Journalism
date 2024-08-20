@@ -16,38 +16,27 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Payments</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
+    <?php include 'cdn.php'?>
+    <link rel="stylesheet" href="./css/sidebar.css"> 
+   <style>
+    .forms_record{
+        padding: 0 7%;
+        margin-top: 70px;
+    }
+   </style>
+   
 </head>
 <body>
-    <h1>Payment Records</h1>
+<?php include 'sidebar.php'; ?>
+    <div class="forms_record">
+    <h1>Admission Forms Payment Records</h1>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Name</th>
                 <th>Reference</th>
-                <th>Serial Number</th>
+                <th>Serial No.</th>
                 <th>Pin</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -58,6 +47,7 @@ if (!$result) {
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <tr>
                     <td><?php echo htmlspecialchars($row['id']); ?></td>
+                    <td><?php echo htmlspecialchars($row['name']); ?></td>
                     <td><?php echo htmlspecialchars($row['reference']); ?></td>
                     <td><?php echo htmlspecialchars($row['serial_number']); ?></td>
                     <td><?php echo htmlspecialchars($row['pin']); ?></td>
@@ -68,6 +58,7 @@ if (!$result) {
             <?php } ?>
         </tbody>
     </table>
+    </div>
 </body>
 </html>
 

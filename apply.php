@@ -1,26 +1,71 @@
 <?php
 session_start();
 
-// Check if user is logged in
-if (!isset($_SESSION['serial_number'])) {
-    header("Location: login.php"); // Redirect to login page if not logged in
-    exit();
-}
-
-// Include database connection if needed
+// Include database connection
 include 'db.php';
 
-// Fetch user details or any other data needed
-$serialNumber = $_SESSION['serial_number'];
-$sql = "SELECT * FROM payments WHERE serial_number = ?";
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, 's', $serialNumber);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-$userData = mysqli_fetch_assoc($result);
-mysqli_stmt_close($stmt);
-mysqli_close($conn);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and process the form data
+    $serialNumber = $_SESSION['serial_number'];
+    $programmeCourseChosen = $_POST['programmeCourseChosen'];
+    $title = $_POST['title'];
+    $surname = $_POST['surname'];
+    $otherNames = $_POST['otherNames'];
+    $firstName = $_POST['firstName'];
+    $postalAddress = $_POST['postalAddress'];
+    $residentialAddress = $_POST['residentialAddress'];
+    $gender = $_POST['gender'];
+    $dateOfBirth = $_POST['dateOfBirth'];
+    $placeOfBirth = $_POST['placeOfBirth'];
+    $nationality = $_POST['nationality'];
+    $religion = $_POST['religion'];
+    $hometown = $_POST['hometown'];
+    $maritalStatus = $_POST['maritalStatus'];
+    $numberOfChildren = $_POST['numberOfChildren'];
+    $idCard = $_POST['id_card'];
+    $idNumber = $_POST['id_number'];
+    $digitalAddressCode = $_POST['digitalAddressCode'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $emailAddress = $_POST['emailAddress'];
+    $hasMedicalHistory = $_POST['has_medical_history'];
+
+    // Handle file uploads
+    $profileImage = $_FILES['profile_image']['name'];
+    $idDocument = $_FILES['id_document']['name'];
+    $medicalHistoryFile = $_FILES['medical_history_file']['name'];
+
+    $targetDir = "uploads/";
+
+    // Check if the directory exists, if not create it
+    if (!is_dir($targetDir)) {
+        mkdir($targetDir, 0755, true);
+    }
+
+    $profileImagePath = $targetDir . basename($profileImage);
+    $idDocumentPath = $targetDir . basename($idDocument);
+    $medicalHistoryFilePath = $targetDir . basename($medicalHistoryFile);
+
+    move_uploaded_file($_FILES['profile_image']['tmp_name'], $profileImagePath);
+    move_uploaded_file($_FILES['id_document']['tmp_name'], $idDocumentPath);
+    move_uploaded_file($_FILES['medical_history_file']['tmp_name'], $medicalHistoryFilePath);
+
+    // Insert the form data into the database
+    $sql = "INSERT INTO payments (serial_number, programme_course_chosen, title, surname, other_names, first_name, postal_address, residential_address, gender, date_of_birth, place_of_birth, nationality, religion, hometown, marital_status, number_of_children, id_card, id_number, digital_address_code, phone_number, email_address, has_medical_history, profile_image, id_document, medical_history_file) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, 'sssssssssssssssssssssssss', $serialNumber, $programmeCourseChosen, $title, $surname, $otherNames, $firstName, $postalAddress, $residentialAddress, $gender, $dateOfBirth, $placeOfBirth, $nationality, $religion, $hometown, $maritalStatus, $numberOfChildren, $idCard, $idNumber, $digitalAddressCode, $phoneNumber, $emailAddress, $hasMedicalHistory, $profileImage, $idDocument, $medicalHistoryFile);
+    mysqli_stmt_execute($stmt);
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+
+    // Redirect to the view page
+    header("Location: view_form.php");
+    exit();
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +98,7 @@ mysqli_close($conn);
           <h3>  Welcome, <?php echo htmlspecialchars($userData['name']); ?>!</h3>
         </div>
      
-        <form id="multiStepForm" method="post" enctype="multipart/form-data">
+        <form id="multiStepForm" method="post" action="" enctype="multipart/form-data">
         <!-- Step 1: Personal Data -->
         <div class="form-step form-step-active">
             <h2>Personal Data</h2>

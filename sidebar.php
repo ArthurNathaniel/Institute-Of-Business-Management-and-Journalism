@@ -7,9 +7,9 @@
     <br>
     <br>
     <div class="links">
-        <h3> <span class="icon"><i class="fa-solid fa-chart-simple"></i></span> Cashier</h3>
+        <h3> <span class="icon"><i class="fa-solid fa-chart-simple"></i></span> Admin</h3>
         <a href="">Dashboard</a>
-        <a href="">Admission Forms</a>
+        <a href="view_payments.php">Admission Forms</a>
         <a href="">Admission</a>
         <a href="event_management.php">Upcoming Events</a>
         <a href="add_news.php">Blog</a>

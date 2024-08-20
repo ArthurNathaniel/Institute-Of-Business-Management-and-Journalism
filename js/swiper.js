@@ -15,6 +15,9 @@ var swiper = new Swiper(".mySwiper", {
 
 
   var swiper = new Swiper(".mySwiper2", {
+    autoplay:true,
+    loop:true,
+    speed:2500,
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
@@ -89,6 +92,32 @@ var swiper = new Swiper(".mySwiper", {
       1024: {
         slidesPerView: 3,
         spaceBetween: 50,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper5", {
+    autoplay:true,
+    loop:true,
+    speed:1500,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
     },
   });
