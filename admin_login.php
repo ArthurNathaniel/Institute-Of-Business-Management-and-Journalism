@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   </div>
                   <br>
                   <div class="form">
-                        <input type="checkbox" id="showPin"> show pin
+                        <input type="checkbox" id="showPin"> show password
                     </div>
                     <div class="forms">
                     <button type="submit">Login</button>
