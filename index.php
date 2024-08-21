@@ -473,7 +473,23 @@
       </div>
     </div>
   </section>
-
+<section>
+  <div class="video_all">
+    <div class="video_place">
+      <video src=""></video>
+    </div>
+    <div class="video_text">
+      <div class="icons_and_text">
+        <div class="icons_text">
+          <img src="./images/accredited.png" alt="">
+        </div>
+      
+      <h1>Global Certification</h1>
+      <p>Earn a Global Certification with the Institute of Business Management & Journalism (IBM&J).</p>
+      </div>
+    </div>
+  </div>
+</section>
   <section>
     <div class="what_our_students_say_all">
       <div class="students_title">

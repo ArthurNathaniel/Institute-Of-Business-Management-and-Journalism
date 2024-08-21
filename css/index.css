@@ -476,6 +476,7 @@ cursor: pointer;
 
 .what_our_students_say_all {
   padding: 0 5%;
+  margin-top: 50px;
 }
 
 .student_slide {
@@ -509,6 +510,12 @@ background-color:#FFF;
   margin-top: 10px;
 }
 
+.video_all{
+  background-color: #2C2C74;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
 
 
 
