@@ -17,65 +17,65 @@
 <body>
   <?php include 'navbar.php' ?>
   <section>
-        <div class="hero_bg">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    include 'db.php'; // Include your database connection file
+    <div class="hero_bg">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <?php
+          include 'db.php'; // Include your database connection file
 
-                    // Fetch the Go Live link from the database
-                    $sql = "SELECT go_live_link FROM settings WHERE id = 1";
-                    $result = mysqli_query($conn, $sql);
-                    $row = mysqli_fetch_assoc($result);
-                    $go_live_link = $row ? $row['go_live_link'] : '#'; // Default to # if no link found
+          // Fetch the Go Live link from the database
+          $sql = "SELECT go_live_link FROM settings WHERE id = 1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          $go_live_link = $row ? $row['go_live_link'] : '#'; // Default to # if no link found
 
-                    // Close the database connection
-                    mysqli_close($conn);
-                    ?>
+          // Close the database connection
+          mysqli_close($conn);
+          ?>
 
-                    <div class="swiper-slide">
-                        <div class="hero_text">
-                            <h1>Institute of Business Management & Journalism</h1>
-                            <p>
-                                The only accredited communication school in the Ashanti Region, recognized by the National Accreditation Board, Ghana
-                            </p>
-                            <div class="hero_btn">
-                                <a href="apply.php">
-                                    <button>Apply Now</button>
-                                </a>
+          <div class="swiper-slide">
+            <div class="hero_text">
+              <h1>Institute of Business Management & Journalism</h1>
+              <p>
+                The only accredited communication school in the Ashanti Region, recognized by the National Accreditation Board, Ghana
+              </p>
+              <div class="hero_btn">
+                <a href="apply.php">
+                  <button>Apply Now</button>
+                </a>
 
-                                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
-                                    <button class="live">Go Live</button>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="./images/h.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="hero_text">
-                            <h1>Institute of Business Management & Journalism</h1>
-                            <p>
-                                Affiliated with the National Board for Professional and Technical Examinations, we provide top-tier education in business and journalism.
-                            </p>
-                            <div class="hero_btn">
-                                <a href="apply.php">
-                                    <button>Apply Now</button>
-                                </a>
-
-                                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
-                                    <button class="live">Go Live</button>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="./images/hero.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-                </div>
+                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
+                  <button class="live">Go Live</button>
+                </a>
+              </div>
             </div>
+            <img src="./images/h.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <div class="hero_text">
+              <h1>Institute of Business Management & Journalism</h1>
+              <p>
+                Affiliated with the National Board for Professional and Technical Examinations, we provide top-tier education in business and journalism.
+              </p>
+              <div class="hero_btn">
+                <a href="apply.php">
+                  <button>Apply Now</button>
+                </a>
+
+                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
+                  <button class="live">Go Live</button>
+                </a>
+              </div>
+            </div>
+            <img src="./images/hero.jpg" alt="">
+          </div>
+
+          <div class="swiper-pagination"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
   <section>
     <div class="about_us_home_all">
       <div class="home_about_text">
@@ -473,23 +473,48 @@
       </div>
     </div>
   </section>
-<section>
-  <div class="video_all">
-    <div class="video_place">
-      <video src=""></video>
-    </div>
-    <div class="video_text">
-      <div class="icons_and_text">
-        <div class="icons_text">
-          <img src="./images/accredited.png" alt="">
+  <section>
+    <div class="video_all">
+
+      <div class="video_place">
+    
+      <video width="100%" height="100%" controls>
+  <source src="https://web.facebook.com/IBMandJ/videos/349287808040026" type="video/iframe">
+  Your browser does not support the video tag.
+</video>
+      </div>
+
+      <div class="video_text">
+        <div class="icons_and_text">
+          <div class="icons_text">
+            <img src="./images/badge_4535518.png" alt="">
+          </div>
+          <div class="vi_text">
+            <h1>Global Certification</h1>
+            <p>Earn a Global Certification with the Institute of Business Management & Journalism (IBM&J).</p>
+          </div>
         </div>
-      
-      <h1>Global Certification</h1>
-      <p>Earn a Global Certification with the Institute of Business Management & Journalism (IBM&J).</p>
+        <div class="icons_and_text">
+          <div class="icons_text">
+            <img src="./images/book_10588194.png" alt="">
+          </div>
+          <div class="vi_text">
+            <h1>Alumini</h1>
+            <p>Join a thriving network of alumni who are making a global impact with their IBM&J education.</p>
+          </div>
+        </div>
+        <div class="icons_and_text">
+          <div class="icons_text">
+            <img src="./images/newspaper_1225031.png" alt="">
+          </div>
+          <div class="vi_text">
+            <h1>Global Certification</h1>
+            <p>Earn a Global Certification with the Institute of Business Management & Journalism (IBM&J).</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <section>
     <div class="what_our_students_say_all">
       <div class="students_title">
@@ -501,22 +526,22 @@
       <div class="students_swiper">
         <div class="swiper mySwiper5">
           <div class="swiper-wrapper">
-          <?php
+            <?php
             include 'db.php'; // Include your database connection file
 
             $sql = "SELECT * FROM testimonials";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<div class="swiper-slide student_slide">';
-                    echo '<div class="student_name"><h4>' . $row['name'] . '</h4></div>';
-                    echo '<div class="student_status"><p>' . $row['status'] . '</p></div>';
-                    echo '<div class="student_testimonial"><p>"' . $row['testimonial'] . '"</p></div>';
-                    echo '</div>';
-                }
+              while ($row = mysqli_fetch_assoc($result)) {
+                echo '<div class="swiper-slide student_slide">';
+                echo '<div class="student_name"><h4>' . $row['name'] . '</h4></div>';
+                echo '<div class="student_status"><p>' . $row['status'] . '</p></div>';
+                echo '<div class="student_testimonial"><p>"' . $row['testimonial'] . '"</p></div>';
+                echo '</div>';
+              }
             } else {
-                echo '<p>No testimonials available.</p>';
+              echo '<p>No testimonials available.</p>';
             }
 
             // Close the database connection
@@ -537,6 +562,12 @@
       window.location.href = 'event_details.php?id=' + eventId;
     }
   </script>
+  <script>
+    document.getElementById('play-button').addEventListener('click', function() {
+        document.getElementById('video-thumbnail').classList.add('hidden');
+        this.classList.add('hidden');
+    });
+</script>
   <script src="./js/swiper.js"></script>
   <script src="./js/search.js"></script>
 </body>

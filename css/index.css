@@ -515,6 +515,35 @@ background-color:#FFF;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  padding: 0 5%;
+  padding-top: 50px;
+  padding-bottom: 90px;
+
+}
+
+.video_text{
+  padding: 0 5%;
+}
+.icons_and_text{
+  display: flex;
+  gap: 20px;
+}
+.icons_text img{
+  width: 70px;
+  height: 70px;
+object-fit: cover;
+}
+
+.vi_text{
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+}
+.vi_text h1{
+  margin-bottom: 7px;
+}
+.icons_and_text{
+  margin-top: 40px;
 }
 
 
