@@ -112,6 +112,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="Communication">Communication</option>
                     <option value="Marketing">Marketing</option>
                     <option value="IT">IT</option>
+                    <option value="Secretarial ship">Secretarial ship</option>
+                    <option value="Office management">Office management</option>
+                   
                 </select>
               </div>
 

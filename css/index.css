@@ -37,8 +37,9 @@
 }
 
 .hero_text h1 {
-
+width: 100%;
   font-size: 45px;
+  text-align: center;
 }
 
 .hero_btn {

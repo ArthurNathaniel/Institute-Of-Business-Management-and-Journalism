@@ -24,7 +24,7 @@
     <div class="all">
         <div class="buy">
             <div class="logo"></div>
-            <h4>INSTIT</h4>
+            <h4>INSTITUTE OF BUSINESS MANAGEMENT & JOURNALISM</h4>
             <h2>Purchase Your Admission Forms</h2>
             <p><b>Price:</b> <span id="price">GH₵ 105.00</span></p>
             <form id="paymentForm">

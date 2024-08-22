@@ -32,7 +32,22 @@
           // Close the database connection
           mysqli_close($conn);
           ?>
+  <div class="swiper-slide">
+            <div class="hero_text">
+              <h1>Welcome to Institute of Business Management & Journalism</h1>
+            
+              <div class="hero_btn">
+                <a href="apply.php">
+                  <button>Apply Now</button>
+                </a>
 
+                <a href="<?php echo htmlspecialchars($go_live_link); ?>" target="_blank">
+                  <button class="live">Go Live</button>
+                </a>
+              </div>
+            </div>
+            <img src="./images/alumni.jpg" alt="">
+          </div>
           <div class="swiper-slide">
             <div class="hero_text">
               <h1>Institute of Business Management & Journalism</h1>
@@ -86,8 +101,7 @@
           <h1>Welcome to <br> IBM&amp;J</h1>
         </div>
         <p>
-          Located at Opposite the NPP Regional Office near Sika FM, Krofrom, Kumasi, the Institute of Business Management and Journalism (IBM&J) has been at the forefront of media education in Ghana for 33 years. Renowned for producing top-tier professionals who contribute significantly to the nation's media and communication landscape, IBM&J stands as a beacon of excellence in the field of business management and journalism.
-        </p>
+        Institute Of Business Management & Journalism(IBM&J) College was established in 1990 as a private tertiary institution and was accredited by the Ghana Tertiary Education(GTEC) formerly Ghana National Accreditation Board in 2005 to run tertiary courses. Since the institute’s inception, it has become one of the famous and foremost private institutions of higher learning in the country and has produced a lot of professionals . IBM&J - SERVE WITH SMILE President: MR. P.F.OWUSU ESTABLISHED: 1990 COLOURS: BLUE, WHITE AND RED        </p>
         <p>
           Join us at IBM&J and be a part of a legacy of excellence in media education. Whether you are passionate about communication, marketing, journalism, or broadcasting, our programs are designed to help you achieve your career goals and make a meaningful impact in the media industry. With our comprehensive curriculum, state-of-the-art facilities, and experienced faculty, IBM&J is the perfect place to start your journey towards a successful and fulfilling career in media and communication.
         </p>
@@ -479,7 +493,7 @@
       <div class="video_place">
     
       <video width="100%" height="100%" controls>
-  <source src="https://web.facebook.com/IBMandJ/videos/349287808040026" type="video/iframe">
+  <source src="./images/advert.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
       </div>
@@ -551,6 +565,13 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="alumini_all">
+      <div class="a_title">
+        <h1></h1>
       </div>
     </div>
   </section>
