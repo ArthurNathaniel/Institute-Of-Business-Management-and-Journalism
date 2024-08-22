@@ -567,13 +567,45 @@
       </div>
     </div>
   </section>
+ 
   <section>
-    <div class="alumini_all">
-      <div class="a_title">
-        <h1></h1>
-      </div>
-    </div>
-  </section>
+        <div class="alumni_pictures_all">
+            <div class="alumni_title">
+                <h1>Few Alumni</h1>
+            </div>
+            <div class="alumni_all">
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/hayford.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Naana Hayford</h4>
+                        <p>Media Personality</p>
+                    </div>
+                </div>
+
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/antie.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Auntie Naa</h4>
+                        <p>Host of Oyerepa Afutuo</p>
+                    </div>
+                </div>
+
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/kwabena.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Kwabena Antwi Boasiako</h4>
+                        <p>Media Personality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
   <section>
     <?php include 'footer.php'; ?>
   </section>

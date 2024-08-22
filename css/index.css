@@ -547,6 +547,43 @@ object-fit: cover;
   margin-top: 40px;
 }
 
+.alumni_pictures_all{
+  padding: 0 7%;
+  margin-bottom: 70px;
+}
+
+.alumni_all{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.alumni_card{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.alumni_image img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.alumni_deatails{
+  padding: 0 5%;
+  padding-block: 20px;
+  background-color: #fff;    
+}
+
+.alumni_title{
+
+  margin-block: 30px;
+  margin-top: 65px;
+}
+
+.alumni_title h1{
+  text-align: center;
+  font-size: 45px;
+}
 
 
 @media only screen and (max-width: 1110px) {
@@ -572,6 +609,15 @@ object-fit: cover;
   .apply_page {
     display: flex;
     flex-direction: column;
+  }
+
+  .video_all{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .video_place{
+    margin-top: 50px;
   }
 }
 
