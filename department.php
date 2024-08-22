@@ -33,7 +33,7 @@
             <div class="department_grid">
              
             <div class="department_card">
-                    <h3>FACULTY OF ARTS</h>
+                    <h3>FACULTY OF ARTS</h3>
                         <p>Dept. Of communication</p>
                         <div class="department_btn">
                             <a href="">
@@ -44,7 +44,7 @@
 
 
                 <div class="department_card">
-                    <h3>FACULTY OF ARTS</h>
+                    <h3>FACULTY OF ARTS</h3>
                         <p>Dept. Of Adm. & Secretaryship</p>
                         <div class="department_btn">
                             <a href="">
@@ -55,7 +55,7 @@
 
 
                 <div class="department_card">
-                    <h3>FACULTY OF ARTS</h>
+                    <h3>FACULTY OF ARTS</h3>
                         <p>Dept. Of Business Management </p>
                         <div class="department_btn">
                             <a href="">
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="department_card">
-                    <h3>FACULTY OF ARTS</h>
+                    <h3>FACULTY OF ARTS</h3>
                         <p>Dept. Of marketing </p>
                         <div class="department_btn">
                             <a href="">
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="department_card">
-                    <h3>FACULTY OF SCIENCE</h>
+                    <h3>FACULTY OF SCIENCE</h3>
                         <p>Dept. Of Computer studies </p>
                         <div class="department_btn">
                             <a href="">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="department_card">
-                    <h3>FACULTY OF SCIENCE</h>
+                    <h3>FACULTY OF SCIENCE</h3>
                         <p>Dept. Of Information Technology</p>
                         <div class="department_btn">
                             <a href="">

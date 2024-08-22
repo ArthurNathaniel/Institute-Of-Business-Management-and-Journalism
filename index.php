@@ -32,10 +32,10 @@
           // Close the database connection
           mysqli_close($conn);
           ?>
-  <div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="hero_text">
               <h1>Welcome to Institute of Business Management & Journalism</h1>
-            
+
               <div class="hero_btn">
                 <a href="apply.php">
                   <button>Apply Now</button>
@@ -101,7 +101,7 @@
           <h1>Welcome to <br> IBM&amp;J</h1>
         </div>
         <p>
-        Institute Of Business Management & Journalism(IBM&J) College was established in 1990 as a private tertiary institution and was accredited by the Ghana Tertiary Education(GTEC) formerly Ghana National Accreditation Board in 2005 to run tertiary courses. Since the institute’s inception, it has become one of the famous and foremost private institutions of higher learning in the country and has produced a lot of professionals . IBM&J - SERVE WITH SMILE President: MR. P.F.OWUSU ESTABLISHED: 1990 COLOURS: BLUE, WHITE AND RED        </p>
+          Institute Of Business Management & Journalism(IBM&J) College was established in 1990 as a private tertiary institution and was accredited by the Ghana Tertiary Education(GTEC) formerly Ghana National Accreditation Board in 2005 to run tertiary courses. Since the institute’s inception, it has become one of the famous and foremost private institutions of higher learning in the country and has produced a lot of professionals . IBM&J - SERVE WITH SMILE President: MR. P.F.OWUSU ESTABLISHED: 1990 COLOURS: BLUE, WHITE AND RED </p>
         <p>
           Join us at IBM&J and be a part of a legacy of excellence in media education. Whether you are passionate about communication, marketing, journalism, or broadcasting, our programs are designed to help you achieve your career goals and make a meaningful impact in the media industry. With our comprehensive curriculum, state-of-the-art facilities, and experienced faculty, IBM&J is the perfect place to start your journey towards a successful and fulfilling career in media and communication.
         </p>
@@ -491,11 +491,10 @@
     <div class="video_all">
 
       <div class="video_place">
-    
-      <video width="100%" height="100%" controls>
-  <source src="./images/advert.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+        <video width="100%" height="100%" controls>
+          <source src="./images/advert.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div class="video_text">
@@ -585,10 +584,10 @@
   </script>
   <script>
     document.getElementById('play-button').addEventListener('click', function() {
-        document.getElementById('video-thumbnail').classList.add('hidden');
-        this.classList.add('hidden');
+      document.getElementById('video-thumbnail').classList.add('hidden');
+      this.classList.add('hidden');
     });
-</script>
+  </script>
   <script src="./js/swiper.js"></script>
   <script src="./js/search.js"></script>
 </body>

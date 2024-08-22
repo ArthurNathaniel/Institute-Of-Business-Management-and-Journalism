@@ -119,9 +119,12 @@ h6 {
     display: block;
 
 }
-
+.social_media{
+    display: flex;
+    gap: 10px;
+}
 .social_media a {
-    padding: 10px;
+
     height: 30px;
     width: 30px;
     font-size: 20px;
@@ -299,12 +302,6 @@ table{
 }
 
 @media only screen and (max-width: 1110px) {
-
-
-
-
-
-
     #toggleButton {
         display: block;
         background-color: #2C2C74;
@@ -327,7 +324,7 @@ table{
 
     .mobile {
         position: absolute;
-        top: 90px;
+        top: 106px;
         z-index: 4554;
         left: 0;
         width: 100%;

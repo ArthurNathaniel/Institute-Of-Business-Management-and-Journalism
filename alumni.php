@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php include 'navbar.php'; ?>
 
-    <section class="hero_bg">
+    <section class="hero_bg" style="background-image: url(./images/alumni.jpg);">
         <div class="hero_text">
             <h1>Alumni</h1>
             <div class="breadcrumb">
@@ -72,12 +72,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </section>
+    <section>
+        <div class="alumni_pictures_all">
+            <div class="alumni_title">
+                <h2>Few Alumni</h2>
+            </div>
+            <div class="alumni_all">
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/hayford.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Naana Hayford</h4>
+                        <p>Media Personality</p>
+                    </div>
+                </div>
 
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/antie.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Auntie Naa</h4>
+                        <p>Host of Oyerepa Afutuo</p>
+                    </div>
+                </div>
+
+                <div class="alumni_card">
+                    <div class="alumni_image">
+                        <img src="./images/kwabena.jpg" alt="">
+                    </div>
+                    <div class="alumni_deatails">
+                        <h4>Kwabena Antwi Boasiako</h4>
+                        <p>Media Personality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="alumni_info">
         <div class="container">
-            <h2>Information on Alumni</h2>
+            <h2>Information on Alumni:</h2>
             <p>We cordially invite you to join our newly launched online Alumni Platform. The platform brings together our Alumni as a collective group, keeps you informed of current programs and activities of the college, and supports the Institute in a variety of ways.</p>
-            <p><strong>Benefits for Alumni:</strong> Network, contact and keep in touch with old coursemates, gain access to jobs listed on the platform, participate in various forthcoming professional development opportunities, mentor students, create and access career services. We at IBM&J care for the success of our alumni.</p>
+            <br>
+            <h2>Benefits for Alumni:</h2> 
+            <p> Network, contact and keep in touch with old coursemates, gain access to jobs listed on the platform, participate in various forthcoming professional development opportunities, mentor students, create and access career services. We at IBM&J care for the success of our alumni.</p>
         </div>
     </section>
 
@@ -85,70 +124,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
             <h2>Alumni Registration</h2>
             <form action="" method="post">
-               <div class="forms">
-               <label for="full_name">Full Name:</label>
-               <input type="text" id="full_name" name="full_name" required>
-               </div>
-
-              <div class="forms">
-              <label for="last_name">Last Name:</label>
-              <input type="text" id="last_name" name="last_name" required>
-              </div>
-
-              <div class="forms">
-              <label for="phone">Phone Number:</label>
-              <input type="text" id="phone" name="phone" required>
-              </div>
-
-           <div class="forms">
-           <label for="email">Email ID:</label>
-           <input type="email" id="email" name="email" required>
-           </div>
-
-              <div class="forms">
-              <label for="faculty">IBM&J Faculty:</label>
-                <select id="faculty" name="faculty" required>
-                    <option value="">Select Faculty</option>
-                    <option value="Communication">Communication</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="IT">IT</option>
-                    <option value="Secretarial ship">Secretarial ship</option>
-                    <option value="Office management">Office management</option>
-                   
-                </select>
-              </div>
-
                 <div class="forms">
-                <label for="admission_year">Year of Admission:</label>
-                <input type="text" id="admission_year" name="admission_year" required>
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" required>
                 </div>
 
-             <div class="forms">
-             <label for="completion_year">Year of Completion:</label>
-             <input type="text" id="completion_year" name="completion_year" required>
-             </div>
+                <div class="forms">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
 
-              <div class="forms">
-              <label for="current_job">Current Job:</label>
-              <input type="text" id="current_job" name="current_job" required>
-              </div>
+                <div class="forms">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
 
-              <div class="forms">
-              <label for="location">Location:</label>
-              <input type="text" id="location" name="location" required>
-              </div>
+                <div class="forms">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-              <div class="forms">
-              <label for="membership_plan">Membership Plan:</label>
-              <input type="text" id="membership_plan" name="membership_plan" value="Free" readonly>
-              </div>
+                <div class="forms">
+                    <label for="faculty">IBM&J Faculty:</label>
+                    <select id="faculty" name="faculty" required>
+                        <option value="">Select Faculty</option>
+                        <option value="Communication">Communication</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="IT">IT</option>
+                        <option value="Secretarial ship">Secretarial ship</option>
+                        <option value="Office management">Office management</option>
 
-             <div class="forms">
-             <button type="submit">Register</button>
-             </div>
+                    </select>
+                </div>
+
+                <div class="forms">
+                    <label for="admission_year">Year of Admission:</label>
+                    <input type="text" id="admission_year" name="admission_year" required>
+                </div>
+
+                <div class="forms">
+                    <label for="completion_year">Year of Completion:</label>
+                    <input type="text" id="completion_year" name="completion_year" required>
+                </div>
+
+                <div class="forms">
+                    <label for="current_job">Current Job:</label>
+                    <input type="text" id="current_job" name="current_job" required>
+                </div>
+
+                <div class="forms">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+
+                <div class="forms">
+                    <label for="membership_plan">Membership Plan:</label>
+                    <input type="text" id="membership_plan" name="membership_plan" value="Free" readonly>
+                </div>
+
+                <div class="forms">
+                    <button type="submit">Register</button>
+                </div>
             </form>
             <div class="side_info">
                 <p>Using this IBM&J alumni and partners' platform, you can get multiple advantages by using this platform. Grow your professional network, connect to your batchmates, meet alumni in different cities when you go there, find a job, and post a job or internship opportunities too. IBM&J is determined to support alumni and partners in enhancing the quality of lives and professional careers.</p>
+                <br>
                 <p><strong>Membership is free and as an alumnus, you can enjoy all the benefits offered by our platform.</strong></p>
             </div>
         </div>

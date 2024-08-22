@@ -31,11 +31,19 @@ td {
 }
 
 .department_card{
-    border: 1px solid #ddd;
     padding: 0 5%;
     padding-block: 50px;
     margin-top: 50px;
     border-radius: 5px;
+    border: 1.5px solid #ddd;
+}
+
+.department_card:hover{
+  
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.department_card p{
+    margin-top: 10px;
 }
 
 .department_btn button{
