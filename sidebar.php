@@ -8,7 +8,7 @@
     <br>
     <div class="links">
         <h3> <span class="icon"><i class="fa-solid fa-chart-simple"></i></span> Admin</h3>
-        <a href="admin_dashboard.php">Dashboard</a>
+      
         <a href="add_live_link.php">Live</a>
         <a href="view_payments.php">Admission Forms Records</a>
         <a href="event_management.php">Upcoming Events</a>

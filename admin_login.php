@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             session_start();
             $_SESSION['admin'] = $username;
             $loginMessage = "Login successful! Redirecting to the admin dashboard...";
-            header("refresh:2;url=admin_dashboard.php");
+            header("refresh:2;url=add_live_link.php");
         } else {
             $loginMessage = "Invalid password.";
         }
