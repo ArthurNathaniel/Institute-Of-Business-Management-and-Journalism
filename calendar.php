@@ -1,3 +1,49 @@
+<?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin'])) {
+    header("Location: admin_login.php");
+    exit();
+}
+
+include 'db.php'; // Database connection
+$upload_error = '';
+
+// Handle file upload
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['calendar_file'])) {
+    $file_name = $_FILES['calendar_file']['name'];
+    $file_tmp = $_FILES['calendar_file']['tmp_name'];
+    $file_type = $_FILES['calendar_file']['type'];
+    $target_dir = "uploads/calendars/";
+
+    // Ensure the uploads folder exists
+    if (!is_dir($target_dir)) {
+        mkdir($target_dir, 0755, true);
+    }
+
+    // Only allow PDF files
+    if ($file_type != "application/pdf") {
+        $upload_error = "Only PDF files are allowed!";
+    } else {
+        $file_path = $target_dir . basename($file_name);
+
+        if (move_uploaded_file($file_tmp, $file_path)) {
+            // Insert the file information into the database
+            $calendar_name = mysqli_real_escape_string($conn, $_POST['calendar_name']);
+            $sql = "INSERT INTO academic_calendars (calendar_name, file_path) VALUES ('$calendar_name', '$file_path')";
+            if (mysqli_query($conn, $sql)) {
+                echo "<script>alert('Calendar uploaded successfully');</script>";
+            } else {
+                $upload_error = "Database error: " . mysqli_error($conn);
+            }
+        } else {
+            $upload_error = "Error uploading file!";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +58,16 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/academics.css">
 </head>
-
+<style>
+    .calendar_list{
+        padding: 0 10%;
+        padding-block: 50px;
+    }
+    th{
+        background-color: #2C2C74;
+        color: #fff;
+    }
+</style>
 <body>
     <?php include 'navbar.php' ?>
     <section>
@@ -28,75 +83,40 @@
         </div>
     </section>
 
-    <section>
-    <div class="calendar_table">
-        <div class="heading">
-            <h1>Academic Calendar</h1>
-        </div>
-        <table>
+    <div class="calendar_list">
+    <h2>Academic Calendar</h2>
+    <table border="1">
+        <thead>
             <tr>
-                <th>SN</th>
-                <th>ACTIVITY</th>
-                <th>FROM</th>
-                <th>TO</th>
+                <!-- <th>SN</th> -->
+                <th>Academic Calendar</th>
+                <!-- <th>Uploaded Date</th> -->
+                <th>Download/View</th>
             </tr>
-            <?php
-            include 'db.php'; // Include your database connection
-
-            // Handle form submission
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $activity = mysqli_real_escape_string($conn, $_POST['activity']);
-                $from_date = mysqli_real_escape_string($conn, $_POST['from_date']);
-                $to_date = mysqli_real_escape_string($conn, $_POST['to_date']);
-
-                // Generate a new SN (Example: 1.0, 1.1, etc.)
-                $query = "SELECT MAX(sn) AS max_sn FROM academic_calendar";
-                $result = mysqli_query($conn, $query);
-                $row = mysqli_fetch_assoc($result);
-                $max_sn = $row['max_sn'];
-                $new_sn = $max_sn ? (floatval($max_sn) + 0.1) : '1.0';
-
-                $sql = "INSERT INTO academic_calendar (sn, activity, from_date, to_date)
-                    VALUES ('$new_sn', '$activity', '$from_date', '$to_date')";
-
-                if (mysqli_query($conn, $sql)) {
-                    echo "<p>New activity added successfully</p>";
-                } else {
-                    echo "<p>Error: " . mysqli_error($conn) . "</p>";
-                }
+        </thead>
+        <tbody>
+        <?php
+        $sql = "SELECT * FROM academic_calendars ORDER BY uploaded_at DESC";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            $sn = 1;
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                // echo "<td>" . $sn++ . "</td>";
+                echo "<td>" . htmlspecialchars($row['calendar_name'], ENT_QUOTES, 'UTF-8') . "</td>";
+                // echo "<td>" . $row['uploaded_at'] . "</td>";
+                echo "<td><a href='" . htmlspecialchars($row['file_path'], ENT_QUOTES, 'UTF-8') . "' target='_blank'>Download/View</a></td>";
+                echo "</tr>";
             }
+        } else {
+            echo "<tr><td colspan='4'>No calendars uploaded yet.</td></tr>";
+        }
+        ?>
+        </tbody>
+    </table>
+</div>
 
-            // Fetch academic calendar entries from the database
-            $sql = "SELECT * FROM academic_calendar ORDER BY sn ASC";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) :
-                    // Extract major and minor parts of SN
-                    $sn_parts = explode('.', $row['sn']);
-                    $current_major = $sn_parts[0];
-                    $minor = isset($sn_parts[1]) ? $sn_parts[1] : '0';
-
-                    // Generate formatted SN
-                    $formatted_sn = sprintf('%s.%s', $current_major, $minor);
-            ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($formatted_sn); ?></td>
-                        <td><?php echo htmlspecialchars($row['activity']); ?></td>
-                        <td><?php echo htmlspecialchars($row['from_date']); ?></td>
-                        <td><?php echo htmlspecialchars($row['to_date']); ?></td>
-                    </tr>
-            <?php
-                endwhile;
-            } else {
-                echo "<tr><td colspan='4'>No activities found.</td></tr>";
-            }
-            mysqli_close($conn); // Close the connection after fetching data
-            ?>
-        </table>
-    </div>
-</section>
-
+<?php mysqli_close($conn); // Close the database connection ?>
 
     <section>
         <?php include 'footer.php'; ?>

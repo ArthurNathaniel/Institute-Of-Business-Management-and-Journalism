@@ -11,9 +11,9 @@ $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     // Handle file upload
-    $date = $_POST['date'];
-    $title = $_POST['title'];
-    $content = $_POST['content'];
+    $date = mysqli_real_escape_string($conn, $_POST['date']);
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $content = mysqli_real_escape_string($conn, $_POST['content']);
 
     $target_dir = "news/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            $image = $target_file;
+            $image = mysqli_real_escape_string($conn, $target_file);
             $sql = "INSERT INTO news (image, date, title, content) VALUES ('$image', '$date', '$title', '$content')";
             if (mysqli_query($conn, $sql)) {
                 $message .= "News added successfully!<br>";
@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
         }
     }
 }
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     $id = $_POST['delete_id'];
@@ -99,18 +100,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add News</title>
     <?php include 'cdn.php'; ?>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/news.css">
-    <link rel="stylesheet" href="./css/sidebar.css">
 </head>
 <body>
-<?php include 'sidebar.php'; ?>
-    <style>
+    <?php include 'sidebar.php'; ?>
 
-    </style>
-</head>
-<body>
     <?php if ($message): ?>
         <script>alert("<?php echo nl2br($message); ?>");</script>
     <?php endif; ?>
@@ -132,15 +129,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>
             </div>
-            <div class="forms">
+            <div class="forms content">
                 <label for="content">Content:</label>
-                <textarea id="content" name="content" required></textarea>
+                <div id="editor"></div>
+                <input type="hidden" id="content" name="content" >
             </div>
             <div class="forms">
                 <button type="submit" id="submitButton">Add News</button>
             </div>
         </form>
     </div>
+
     <div class="news_all">
         <div class="news_title">
             <h4><i class="fa-solid fa-minus"></i> LATEST NEWS</h4>
@@ -172,5 +171,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
         </div>
     </div>
 
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        // Initialize Quill editor
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+        // Set the form submission to include the Quill content
+        document.querySelector('form').onsubmit = function() {
+            var content = document.querySelector('input[name=content]');
+            content.value = quill.root.innerHTML;
+        };
+    </script>
 </body>
 </html>
+

@@ -528,6 +528,7 @@
       </div>
     </div>
   </section>
+
   <section>
     <div class="what_our_students_say_all">
       <div class="students_title">
@@ -535,6 +536,7 @@
         <p>Here's what our students say—past and present—about their experience at the Institute of
           Business Management & Journalism
         </p>
+    
       </div>
       <div class="students_swiper">
         <div class="swiper mySwiper5">
@@ -548,10 +550,32 @@
             if (mysqli_num_rows($result) > 0) {
               while ($row = mysqli_fetch_assoc($result)) {
                 echo '<div class="swiper-slide student_slide">';
-                echo '<div class="student_name"><h4>' . $row['name'] . '</h4></div>';
-                echo '<div class="student_status"><p>' . $row['status'] . '</p></div>';
-                echo '<div class="student_testimonial"><p>"' . $row['testimonial'] . '"</p></div>';
+                echo '   <div class="slide_testiomonial">';
+echo ' <div class="star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        </div>';
+                // Display testimonial background with image and name
+                // Close testimonial_bg
+
+                // Display the status and testimonial
+
+                echo '<div class="student_testimonial"><p>"' . htmlspecialchars($row['testimonial']) . '"</p></div>';
                 echo '</div>';
+                echo '<div class="testimonial_bg">';
+
+                if (!empty($row['image'])) {
+                  echo '<div class="image_profile"> <img src="' . htmlspecialchars($row['image']) . '" alt="Student Image"></div>';
+                } else {
+                  echo '<div class="image_profile"> <img src="./images/logo.png" alt="Default Image"></div>';
+                }
+             
+                echo '<div class="student_name"><h4>' . htmlspecialchars($row['name']) . '</h4> <p>' . htmlspecialchars($row['status']) . '</p></div>';
+                echo '</div>';
+                echo '</div>'; // Close swiper-slide
               }
             } else {
               echo '<p>No testimonials available.</p>';
@@ -560,52 +584,52 @@
             // Close the database connection
             mysqli_close($conn);
             ?>
-
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
   </section>
- 
+
+
   <section>
-        <div class="alumni_pictures_all">
-            <div class="alumni_title">
-                <h1>Few Alumni</h1>
-            </div>
-            <div class="alumni_all">
-                <div class="alumni_card">
-                    <div class="alumni_image">
-                        <img src="./images/hayford.jpg" alt="">
-                    </div>
-                    <div class="alumni_deatails">
-                        <h4>Naana Hayford</h4>
-                        <p>Media Personality</p>
-                    </div>
-                </div>
-
-                <div class="alumni_card">
-                    <div class="alumni_image">
-                        <img src="./images/antie.jpg" alt="">
-                    </div>
-                    <div class="alumni_deatails">
-                        <h4>Auntie Naa</h4>
-                        <p>Host of Oyerepa Afutuo</p>
-                    </div>
-                </div>
-
-                <div class="alumni_card">
-                    <div class="alumni_image">
-                        <img src="./images/kwabena.jpg" alt="">
-                    </div>
-                    <div class="alumni_deatails">
-                        <h4>Kwabena Antwi Boasiako</h4>
-                        <p>Media Personality</p>
-                    </div>
-                </div>
-            </div>
+    <div class="alumni_pictures_all">
+      <div class="alumni_title">
+        <h1>Few Alumni</h1>
+      </div>
+      <div class="alumni_all">
+        <div class="alumni_card">
+          <div class="alumni_image">
+            <img src="./images/hayford.jpg" alt="">
+          </div>
+          <div class="alumni_deatails">
+            <h4>Naana Hayford</h4>
+            <p>Media Personality</p>
+          </div>
         </div>
-    </section>
+
+        <div class="alumni_card">
+          <div class="alumni_image">
+            <img src="./images/antie.jpg" alt="">
+          </div>
+          <div class="alumni_deatails">
+            <h4>Auntie Naa</h4>
+            <p>Host of Oyerepa Afutuo</p>
+          </div>
+        </div>
+
+        <div class="alumni_card">
+          <div class="alumni_image">
+            <img src="./images/kwabena.jpg" alt="">
+          </div>
+          <div class="alumni_deatails">
+            <h4>Kwabena Antwi Boasiako</h4>
+            <p>Media Personality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <?php include 'footer.php'; ?>
   </section>

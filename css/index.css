@@ -476,7 +476,7 @@ cursor: pointer;
 }
 
 .what_our_students_say_all {
-  padding: 0 5%;
+  padding: 0 7%;
   margin-top: 50px;
 }
 
@@ -484,8 +484,8 @@ cursor: pointer;
   /* border: 2px dashed #2C2C74; */
   width: 100%;
   margin-block: 50px;
-  padding: 20px;
-background-color:#FFF;
+  /* padding: 20px; */
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -496,9 +496,19 @@ background-color:#FFF;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.slide_testiomonial{
+  background-color:#FFF;
+  padding: 0 5%;
+  padding-block: 30px;
+}
+
+.slide_testiomonial i{
+  color: goldenrod;
+}
 .student_testimonial p {
   margin-top: 10px;
   font-size: 16px;
+  font-style: italic;
 }
 
 .student_status p {
@@ -511,6 +521,33 @@ background-color:#FFF;
   margin-top: 10px;
 }
 
+.testimonial_bg{
+  background-color: #2C2C74;
+color: #FFF;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 0 5%;
+  padding-block: 15px;
+}
+
+.student_name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  text-align: left;
+  width: 100%;
+}
+.student_name p,h4{
+  width: 100%;
+}
+.image_profile img{
+  border-radius:50% ;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
 .video_all{
   background-color: #2C2C74;
   display: grid;
