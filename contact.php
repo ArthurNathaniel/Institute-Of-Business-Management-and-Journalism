@@ -90,9 +90,9 @@
                                 <i class="fa-solid fa-house"></i>
                             </p>
 
-                            <p><a href="mailto:info@ibmandj.org">info@ibmandj.org</a>
+                            <p><a href="mailto:ibmmje@yahoo.co.uk">ibmmje@yahoo.co.uk</a>
                                 <br>
-                                <a href="mailto:admission@ibmandj.org">admission@ibmandj.org</a>
+                                <a href="mailto:ibmandj1990@gmail.com">ibmandj1990@gmail.com</a>
                             </p>
                         </div>
 
